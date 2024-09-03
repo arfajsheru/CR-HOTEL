@@ -9,7 +9,7 @@ import { TiThMenu } from "react-icons/ti";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   return (
-    <div className="flex items-center justify-between py-2 font-medium">
+    <div className="flex items-center justify-between py-2 font-medium ">
       <img src={logo2} className="w-16 border rounded-full" alt="" />
       {/* Nav option */}
       <ul className="hidden sm:flex gap-5 text-sm text-gray-700">
