@@ -85,7 +85,7 @@ const Banner = () => {
                   <p className="">{banner.offer}</p>
                 </div>
                 <div>
-                <button className="bg-custom-orange text-white py-2 sm:py-3 px-4 sm:px-10 rounded-sm shadow-md hover:bg-white border-2 hover:border-custom-orange hover:text-black outline-none transition duration-300">{banner.buttonText}</button>
+                <button className="bg-custom text-white py-2 sm:py-3 px-4 sm:px-10 rounded-sm shadow-md hover:bg-white border-2 hover:border-custom hover:text-black outline-none transition duration-300">{banner.buttonText}</button>
                 </div>
               </div>
             </div>
