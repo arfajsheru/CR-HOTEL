@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,8 @@
 *{
     box-sizing: border-box;
 }
+
+/* ---------- Navbar Hr Edite ---------- */
 
 a.active hr{
     display: block;
@@ -21,6 +24,8 @@ a.active hr{
     font-family: "Lora", serif;
 }
 
+
+/* --------------Text content hero ------------------ */
 
 /* Define the keyframes for the fade-in animation */
 @keyframes fadeIn {
@@ -38,4 +43,75 @@ a.active hr{
 .text-content {
   animation: fadeIn 1s linear;
 }
+
+
+
+
+/* ---------------- Hero Banner img ------------------ */
+
+.banner-img {
+  transition: transform 1s ease;
+}
+
+.banner-img:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* ---------- Swiper Side Button edite ---------- */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff; /* Text color for buttons */
+  background-color: #ad954f; /* Background color */
+  border-radius: 50%; /* Round buttons */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure buttons are on top */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Size of the arrow icon */
+  color: black;
+  font-weight: bold;
+}
+
+.swiper-button-next {
+  right: 10px; /* Distance from the right edge */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Distance from the left edge */
+}
+
+@media (max-width:640px) {
+  .swiper-button-next, .swiper-button-prev{
+      width: 30px;
+      height: 30px;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width:700px) {
+  .swiper-button-next, .swiper-button-prev{
+      width: 30px;
+      height: 30px;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 10px;
+  }
+}
+
+
+
 

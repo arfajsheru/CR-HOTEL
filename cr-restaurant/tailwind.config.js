@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: [
     "./index.html",
@@ -10,6 +9,12 @@ export default {
       colors: {
         'custom': '#ad954f',
       },
+      animation: {
+        'click-effect': 'click-effect 0.3s ease-in-out',
+      },
+      fontFamily:{
+        'nav-font': '"Montserrat", sans-serif;'
+      }
     },
   },
   plugins: [],

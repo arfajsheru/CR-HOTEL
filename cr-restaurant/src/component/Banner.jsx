@@ -48,15 +48,14 @@ const Banner = () => {
   return (
     <div className="relative w-full  h-full md:h-[88vh] rounded-md  overflow-hidden">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }} // Auto-slide delay time
-        loop={true} // Infinite loop slider
-        spaceBetween={30} // Space between slides
+       modules={[Navigation, Pagination, Autoplay]}
+       navigation
+       slidesPerView={1}
+       pagination={{ clickable: true }}
+       autoplay={{ delay: 5000 }} // Increase delay to slow down autoplay
+       loop={true} // Infinite loop slider
+       spaceBetween={30} // Space between slides
+       speed={1500} // Set speed to slow down transition
       >
         {bannerList.map((banner) => (
         
@@ -65,10 +64,10 @@ const Banner = () => {
               <img
                 src={banner.imgUrl}
                 alt=""
-                className="object-cover brightness-50  w-full h-full md:h-[88vh] rounded-md"
+                className="object-cover brightness-50  w-full h-full md:h-[88vh] rounded-md banner-img"
               />
               {/* Text content */}
-              <div className=" text-content flex flex-col gap-3 w-[75%] md:w-[40%] absolute top-1/2 left-4 sm:left-10  lg:top-2/3 transform -translate-y-1/2  text-white">
+              <div className=" text-content flex flex-col  gap-3 w-[75%] md:w-[40%] absolute top-1/2 left-12 sm:left-24  lg:top-2/4 transform -translate-y-1/2  text-white">
                 <div className="flex flex-col gap-2 sm:gap-4">
                   <p className="text-3xl sm:text-4xl font-bold style2-font">
                     {banner.title}
