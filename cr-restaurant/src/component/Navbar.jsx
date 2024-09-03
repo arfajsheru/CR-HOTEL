@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo2 from "../assets/new-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
@@ -9,9 +9,30 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdArrowRoundBack } from "react-icons/io";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [scorll, setScroll]= useState(false)
+
+  useEffect(() => {
+    
+    const hadnleScroller = () => {
+      let offset = window.scrollY;
+      if(offset > 150){
+          setScroll(true);
+      }
+      else{
+        setScroll(false)
+      }
+      console.log(offset);
+    }
+    
+    hadnleScroller();
+      
+  window.addEventListener('scroll', hadnleScroller);
+  },[]);
+
+
   return (
-    <div className="flex items-center justify-between py-2 font-medium ">
-      <img src={logo2} className="w-36 md:w-48 rounded-full" alt="" />
+    <div className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom ${scorll ? "sticky-header": ""}`}>
+      <img src={logo2} className="w-36 md:w-44 rounded-full object-cover" alt="" />
       {/* Nav option */}
       <ul className="hidden sm:flex gap-5 text-sm sm:text-[17px] text-gray-700 font-nav-font ">
         <NavLink to={"/"} className="flex flex-col gap-1 items-center ">

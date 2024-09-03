@@ -46,7 +46,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="relative w-full  h-full md:h-[88vh] rounded-md  overflow-hidden">
+    <div className="relative w-full  h-full md:h-[88vh] overflow-hidden ">
       <Swiper
        modules={[Navigation, Pagination, Autoplay]}
        navigation
@@ -64,7 +64,7 @@ const Banner = () => {
               <img
                 src={banner.imgUrl}
                 alt=""
-                className="object-cover brightness-50  w-full h-full md:h-[88vh] rounded-md banner-img"
+                className="object-cover brightness-50  w-full h-full md:h-[88vh] banner-img"
               />
               {/* Text content */}
               <div className=" text-content flex flex-col  gap-3 w-[75%] md:w-[40%] absolute top-1/2 left-12 sm:left-24  lg:top-2/4 transform -translate-y-1/2  text-white">

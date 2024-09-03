@@ -10,7 +10,25 @@
     box-sizing: border-box;
 }
 
+
 /* ---------- Navbar Hr Edite ---------- */
+
+.sticky-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+  animation: sticky-navbar 0.3s ease forwards;
+}
+
+@keyframes sticky-navbar {
+  0%{
+    transform: translateY(-100px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
 
 a.active hr{
     display: block;
@@ -111,6 +129,9 @@ a.active hr{
     font-size: 10px;
   }
 }
+
+/* --------------Title-------------- */
+
 
 
 
