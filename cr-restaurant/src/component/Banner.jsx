@@ -43,7 +43,15 @@ const Banner = () => {
       rating: 3.5,
       buttonText: "Order Now",
     },
+    
   ];
+
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
 
   return (
     <div className="relative w-full  h-full md:h-[88vh] overflow-hidden ">
@@ -51,11 +59,12 @@ const Banner = () => {
        modules={[Navigation, Pagination, Autoplay]}
        navigation
        slidesPerView={1}
-       pagination={{ clickable: true }}
+       pagination={pagination}
        autoplay={{ delay: 5000 }} // Increase delay to slow down autoplay
        loop={true} // Infinite loop slider
        spaceBetween={30} // Space between slides
        speed={1500} // Set speed to slow down transition
+       className="mySwiper"
       >
         {bannerList.map((banner) => (
         

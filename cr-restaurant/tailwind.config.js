@@ -13,7 +13,8 @@ export default {
         'click-effect': 'click-effect 0.3s ease-in-out',
       },
       fontFamily:{
-        'nav-font': '"Montserrat", sans-serif;'
+        'nav-font': '"Montserrat", sans-serif;',
+        'lora-font':'"Lora", serif'
       }
     },
   },

@@ -21,7 +21,6 @@ const Navbar = () => {
       else{
         setScroll(false)
       }
-      console.log(offset);
     }
     
     hadnleScroller();
@@ -32,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom ${scorll ? "sticky-header": ""}`}>
-      <img src={logo2} className="w-36 md:w-44 rounded-full object-cover" alt="" />
+      <Link to={'/'}><img src={logo2} className="w-36 md:w-44 rounded-full object-cover" alt="" /></Link>
       {/* Nav option */}
       <ul className="hidden sm:flex gap-5 text-sm sm:text-[17px] text-gray-700 font-nav-font ">
         <NavLink to={"/"} className="flex flex-col gap-1 items-center ">
