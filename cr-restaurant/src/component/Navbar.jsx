@@ -33,21 +33,21 @@ const Navbar = () => {
 
       {/* Action Bar */}
       <div className="flex items-center gap-6">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer ">
           <IoSearchSharp className="text-2xl text-custom" />
           <p className="text-[9px]">search</p>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer ">
           <MdOutlineFavoriteBorder className="text-2xl text-custom" />
           <p className="text-[9px]">Favorite</p>
         </div>
 
-        <Link to={"/cart"} className="flex flex-col items-center">
+        <Link to={"/cart"} className="flex flex-col items-center cursor-pointer ">
           <MdOutlineLocalGroceryStore className="text-2xl text-custom" />
           <p className="text-[9px]">Cart</p>
         </Link>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom" />
           <p className="text-[9px]">Profile</p>
         </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
           onClick={() => setVisible(true)}
           className="flex flex-col items-center md:hidden"
         >
-          <TiThMenu className="text-2xl font-cus"  onClick={() => setVisible(true)} />
+          <TiThMenu className="text-2xl text-custom cursor-pointer "  onClick={() => setVisible(true)} />
           <p className="text-[9px]">Menu</p>
         </div>
       </div>
