@@ -34,21 +34,21 @@ const Navbar = () => {
       {/* Action Bar */}
       <div className="flex items-center gap-6">
         <div className="flex flex-col items-center">
-          <IoSearchSharp className="text-2xl font-cus" />
+          <IoSearchSharp className="text-2xl text-custom" />
           <p className="text-[9px]">search</p>
         </div>
 
         <div className="flex flex-col items-center">
-          <MdOutlineFavoriteBorder className="text-2xl font-cus" />
+          <MdOutlineFavoriteBorder className="text-2xl text-custom" />
           <p className="text-[9px]">Favorite</p>
         </div>
 
         <Link to={"/cart"} className="flex flex-col items-center">
-          <MdOutlineLocalGroceryStore className="text-2xl font-cus" />
+          <MdOutlineLocalGroceryStore className="text-2xl text-custom" />
           <p className="text-[9px]">Cart</p>
         </Link>
         <div className="flex flex-col items-center">
-          <CgProfile className="text-2xl font-cus" />
+          <CgProfile className="text-2xl text-custom" />
           <p className="text-[9px]">Profile</p>
         </div>
         <div
