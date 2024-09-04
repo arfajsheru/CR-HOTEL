@@ -3,8 +3,8 @@ import Title from "./Title";
 import { menu_list } from "../assets/assets";
 const Category = () => {
   return (
-    <div className="text-center text-1xl sm:text-2xl md:text-3xl">
-      <div className="py-8 text-center">
+    <div className="text-center text-1xl">
+      <div className="py-8 text-center  text-3xl">
         <Title text1={"CATEGORY"} text2={"FOOD ITEMS"} />
         <p className="text-sm font-md font-nav-font text-gray-600">
           Discover a wide range of delicious and fresh{" "}
