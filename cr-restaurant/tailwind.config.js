@@ -14,7 +14,8 @@ export default {
       },
       fontFamily:{
         'nav-font': '"Montserrat", sans-serif;',
-        'lora-font':'"Lora", serif'
+        'lora-font':'"Lora", serif',
+        'footer-font':'"Work Sans", sans-serif'
       }
     },
   },

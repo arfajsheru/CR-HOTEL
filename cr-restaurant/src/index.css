@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Martian+Mono:wght@100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +9,21 @@
 *{
     box-sizing: border-box;
 }
+
+
+/* ------------ App Animation ----------- */
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
 
 
 /* ---------- Navbar Hr Edite ---------- */
@@ -194,6 +209,79 @@ a.active hr{
 
 /* ----------- Scrollbar hidden ------------ */
 
+
+.our-policy-section {
+  padding: 30px;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  margin: 20px auto;
+  text-align: center;
+  max-width: 1200px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.policy-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.policy-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.policy-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  min-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.policy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: hoverBounce 0.3s ease-in-out;
+}
+
+.policy-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.policy-description {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hoverBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 
 
 

@@ -15,7 +15,7 @@ const Navbar = () => {
     
     const hadnleScroller = () => {
       let offset = window.scrollY;
-      if(offset > 150){
+      if(offset > 300){
           setScroll(true);
       }
       else{
