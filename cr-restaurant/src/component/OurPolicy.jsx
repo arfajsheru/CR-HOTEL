@@ -31,22 +31,22 @@ const OurPolicy = () => {
       
   return (
     <div className="w-full flex flex-col border-2  border-custom mt-2 py-8">
-      <div className="text-3xl text-center">
+      <div className="sm:text-2xl md:text-3xl text-center">
         <Title text1={"OUR"} text2={"POLICIES"} />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-12 sm:px-28">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-12 sm:px-28 ">
         {policies.map((policy, index) => (
-          <div
-            key={index}
-            className="bg-custom p-6 flex flex-col justify-between items-center rounded-md shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl hover:opacity-90"
-          >
-            <h3 className="text-gray-800 font-lora-font font-bold  sm:text-2xl mb-3">
-              {policy.title}
-            </h3>
-            <p className="text-gray-500 sm:text-lg text-center">
-              {policy.description}
-            </p>
-          </div>
+           <div
+           key={index}
+           className="p-6 flex flex-col justify-between items-center rounded-md shadow-lg bg-white hover:bg-gray-100 transition-all duration-500 transform hover:scale-105 hover:shadow-xl"
+         >
+           <p className="text-black font-lora-font font-bold mb-3 uppercase">
+             {policy.title}
+           </p>
+           <p className="text-gray-600 sm:text-lg font-cart-font text-center">
+             {policy.description}
+           </p>
+         </div>
         ))}
       </div>
     </div>
