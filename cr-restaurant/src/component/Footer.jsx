@@ -12,7 +12,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-custom text-white py-10 mt-3 container">
+    <footer className="bg-custom text-white py-10 mt-3 container onscroll">
       <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 bg-custom">
         {/* Home info section */}
         <div className="flex flex-col gap-6">

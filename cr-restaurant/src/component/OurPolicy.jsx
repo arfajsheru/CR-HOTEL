@@ -30,7 +30,7 @@ const OurPolicy = () => {
       ];
       
   return (
-    <div className="w-full flex flex-col border-2  border-custom mt-2 py-8">
+    <div className="w-full flex flex-col border-2  border-custom mt-2 py-8 onscroll">
       <div className="sm:text-2xl md:text-3xl text-center">
         <Title text1={"OUR"} text2={"POLICIES"} />
       </div>

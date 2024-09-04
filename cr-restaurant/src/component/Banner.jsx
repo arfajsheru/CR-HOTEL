@@ -54,7 +54,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full  h-full md:h-[88vh] overflow-hidden ">
+    <div className="relative w-full  h-full md:h-[88vh] overflow-hidden onscroll">
       <Swiper
        modules={[Navigation, Pagination, Autoplay]}
        navigation
