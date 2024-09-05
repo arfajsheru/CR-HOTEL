@@ -254,7 +254,7 @@ a.active hr{
 }
 
 
-/* ----------- Scrollbar hidden ------------ */
+/* ----------- Scrollbar Animation items hidden ------------ */
 
 
 /* @keyframes appear {
@@ -274,3 +274,32 @@ a.active hr{
     animation-timeline: view();
     animation-range: entry 0;
 } */
+
+
+/* scrollbar */
+
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 9px; /* Set the width of the scrollbar */
+  height: 9px; /* Set the height for horizontal scrollbar */
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background color */
+ /* Rounded corners for track */
+}
+
+/* Scrollbar thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+  background-color: #ad954f; /* Handle color */
+  /* Rounded corners for handle */
+  border: 2px solid #f1f1f1; /* Adds space between thumb and track */
+}
+
+/* Scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ad954f; /* Handle color on hover */
+}
+
+

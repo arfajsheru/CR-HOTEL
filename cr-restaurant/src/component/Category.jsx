@@ -26,7 +26,7 @@ const Category = () => {
                   alt=""
                 />
               </div>
-              <p className="text-sm font-nav-font text-custom">
+              <p className="text-sm font-cart-font text-gray-600 font-semibold">
                 {item.menu_name}
               </p>
             </div>
