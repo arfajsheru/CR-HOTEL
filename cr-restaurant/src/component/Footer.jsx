@@ -13,7 +13,8 @@ import { FaArrowRight } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-custom text-white py-10 mt-3 container onscroll">
-      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 bg-custom">
+      <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-10">
+
         {/* Home info section */}
         <div className="flex flex-col gap-6">
           <h2 className="text-1xl font-nav-font font-bold md:text-3xl">Cafe Rajasthan</h2>
