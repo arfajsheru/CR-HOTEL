@@ -15,11 +15,11 @@ const About = () => {
 
         <img
           src={aboutimg}
-          className="w-[500px] h-[450px] object-cover"
+          className="w-[500px] h-[450px] object-cover animate-fadeInUp"
           alt=""
         />
 
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600 text-1xl">
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600 text-1xl animate-fadeInUp">
           <p className="">
             Welcome to cafe rajasthan, where we serve you the best of culinary
             delights. Our passion for food is reflected in every dish we create,
@@ -47,7 +47,7 @@ const About = () => {
           <Title text1={"WHY"} text2={"CHOOSE US"} />
         </div>
 
-        <div className="flex flex-col md:flex-row text-sm mb-20 gap-2">
+        <div className="flex flex-col md:flex-row text-sm mb-20 gap-2 animate-fadeInUp">
           <div className="border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5 border-custom">
             <b className="text-custom">Quality Assurance</b>
             <p className="text-gray-600">

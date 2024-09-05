@@ -276,7 +276,7 @@ a.active hr{
 } */
 
 
-/* scrollbar */
+/* ---------------scrollbar--------------- */
 
 /* Scrollbar container */
 ::-webkit-scrollbar {
@@ -300,6 +300,27 @@ a.active hr{
 /* Scrollbar thumb on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #ad954f; /* Handle color on hover */
+}
+
+
+
+
+
+/* --------------- About us Animation --------------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 
