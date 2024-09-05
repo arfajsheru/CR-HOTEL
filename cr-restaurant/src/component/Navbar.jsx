@@ -9,29 +9,36 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdArrowRoundBack } from "react-icons/io";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const [scorll, setScroll]= useState(false)
+  const [scorll, setScroll] = useState(false);
 
   useEffect(() => {
-    
     const hadnleScroller = () => {
       let offset = window.scrollY;
-      if(offset > 300){
-          setScroll(true);
+      if (offset > 300) {
+        setScroll(true);
+      } else {
+        setScroll(false);
       }
-      else{
-        setScroll(false)
-      }
-    }
-    
-    hadnleScroller();
-      
-  window.addEventListener('scroll', hadnleScroller);
-  },[]);
+    };
 
+    hadnleScroller();
+
+    window.addEventListener("scroll", hadnleScroller);
+  }, []);
 
   return (
-    <div className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom ${scorll ? "sticky-header": ""}`}>
-      <Link to={'/'}><img src={logo2} className="w-36 md:w-44 rounded-full object-cover" alt="" /></Link>
+    <div
+      className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom ${
+        scorll ? "sticky-header" : ""
+      }`}
+    >
+      <Link to={"/"}>
+        <img
+          src={logo2}
+          className="w-36 md:w-44 rounded-full object-cover"
+          alt=""
+        />
+      </Link>
       {/* Nav option */}
       <ul className="hidden sm:flex gap-5 text-sm sm:text-[17px] text-gray-700 font-nav-font ">
         <NavLink to={"/"} className="flex flex-col gap-1 items-center ">
@@ -71,7 +78,7 @@ const Navbar = () => {
           <MdOutlineLocalGroceryStore className="text-2xl text-custom hover:scale-75" />
           <p className="text-[9px]">Cart</p>
         </Link>
-        <div className="flex flex-col items-center cursor-pointer ">
+        <div className="hidden sm:flex flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom hover:scale-75" />
           <p className="text-[9px]">Profile</p>
         </div>
@@ -95,15 +102,19 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col">
-          <div
-            onClick={() => setVisible(false)}
-            className="flex gap-1 items-center py-2 px-2 border-b bg-black text-custom hover:bg-custom hover:text-black"
-          >
-            <IoMdArrowRoundBack />
-            <p>Back</p>
+          <div className=" flex justify-between py-2 px-2 border-b bg-black text-custom">
+            <div
+              onClick={() => setVisible(false)}
+              className="flex gap-1 items-center "
+            >
+              <IoMdArrowRoundBack />
+              <p>Back</p>
+            </div>
+            <CgProfile className="text-2xl" />
           </div>
 
           <div className="flex flex-col">
+
             <NavLink
               onClick={() => setVisible(false)}
               to={"/"}

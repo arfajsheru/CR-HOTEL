@@ -239,7 +239,7 @@ a.active hr{
 /* ----------- Scrollbar hidden ------------ */
 
 
-@keyframes appear {
+/* @keyframes appear {
   from{
     opacity: 0;
     scale: 0.5;
@@ -255,4 +255,4 @@ a.active hr{
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0;
-}
+} */
