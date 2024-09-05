@@ -11,7 +11,7 @@ import Product from "./pages/Product";
 import PlaceOrder from './PlaceOrder';
 import Navbar from "./component/Navbar";
 import Footer from './component/Footer';
-
+import logo from "/logo3.png"
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -19,15 +19,19 @@ const App = () => {
     
     setTimeout(() => {
       setLoading(false);
-    }, 3000); // 
+    }, 5000); // 
   }, []);
 
   return (
     <div className='px-4 sm:px-[1vw] md:px-[2vw] lg:px-[3vw] app'>
       {loading ? (
-        <div className='flex justify-center items-center h-screen'>
-          <span className='loader'></span>
-        </div>
+      <div className="flex justify-center items-center h-screen">
+      <span className="loader">
+        <img src={logo} className="logo-image" alt="logo" />
+      </span>
+    </div>
+    
+      
       ) : (
         <>
           <Navbar />
