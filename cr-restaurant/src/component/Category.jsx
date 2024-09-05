@@ -19,11 +19,13 @@ const Category = () => {
               key={index}
               className="flex flex-col items-center gap-2 overflow-hidden"
             >
-              <img
-                className="h-24 w-24 rounded-[50%] border-2 border-custom"
-                src={item.menu_image}
-                alt=""
-              />
+              <div class="img-wrapper border-[3px] border-custom">
+                <img
+                  className="h-24 w-24 rounded-[50%]  category-img"
+                  src={item.menu_image}
+                  alt=""
+                />
+              </div>
               <p className="text-sm font-nav-font text-custom">
                 {item.menu_name}
               </p>

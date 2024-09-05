@@ -26,7 +26,9 @@
 }
 
 
-/* HTML: <div class="loader"></div> */
+
+
+/* loading app */
 .loader {
   height: 80px;
   aspect-ratio: 1;
@@ -119,7 +121,23 @@ a.active hr{
   transform: scale(1.2);
 }
 
+/* ----------- Category img ------------ */
 
+
+.img-wrapper {
+  display: inline-block; 
+  border-radius: 50%; 
+  overflow: hidden; 
+}
+
+/* Image ke liye CSS */
+.category-img {
+  transition: transform 1s ease; /* Smooth transition on hover */
+}
+
+.category-img:hover {
+  transform: scale(1.2); /* Scale on hover */
+}
 
 /* ---------- Swiper Side Button edite ---------- */
 
