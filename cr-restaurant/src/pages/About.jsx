@@ -5,14 +5,14 @@ const About = () => {
   return (
     <div className="pt-8">
       {/* Title About Us */}
-      <div className="text-2xl text-center">
+      <div className="text-3xl text-center">
         <Title text1={"ABOUTE"} text2={"US"} />
       </div>
 
 
       {/* Main Content About Us */}
-      <div className="my-10 flex flex-col md:flex-row flex-wrap gap-10 md:gap-24 relative justify-center">
-
+      <div className="my-10 flex flex-col md:flex-row flex-wrap gap-10 md:gap-10 relative justify-center animate-fadeInUp">
+      
         <img
           src={aboutimg}
           className="w-[500px] h-[450px] object-cover animate-fadeInUp"
