@@ -9,28 +9,10 @@ import { TiThMenu } from "react-icons/ti";
 import { IoMdArrowRoundBack } from "react-icons/io";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const [scorll, setScroll] = useState(false);
-
-  useEffect(() => {
-    const hadnleScroller = () => {
-      let offset = window.scrollY;
-      if (offset > 300) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-
-    hadnleScroller();
-
-    window.addEventListener("scroll", hadnleScroller);
-  }, []);
 
   return (
     <div
-      className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom ${
-        scorll ? "sticky-header" : ""
-      }`}
+      className={` flex items-center justify-between py-1 font-medium border-b-2 border-custom `}
     >
       <Link to={"/"}>
         <img
