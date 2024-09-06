@@ -18,8 +18,6 @@ const Menu = () => {
         <p>{item.rating.stars}</p>
         <p>{item.rating.view}</p>
         </div>
-       
-       
         <p>{item.category}</p>
         <p>not difine</p>
         
