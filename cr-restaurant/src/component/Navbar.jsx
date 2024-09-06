@@ -55,10 +55,11 @@ const Navbar = () => {
 
         <Link
           to={"/cart"}
-          className="flex flex-col items-center cursor-pointer "
+          className="flex flex-col items-center cursor-pointer relative"
         >
           <MdOutlineLocalGroceryStore className="text-2xl text-custom icon" />
-          <p className="text-[9px]">Cart</p>
+          <p className="text-[9px] relative">Cart</p>
+          <p className="absolute right-1 top-[-13px] rounded-full bg-custom text-[10px] w-4 h-4 text-center  ">10</p>
         </Link>
         <div className="hidden sm:flex flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom icon" />
