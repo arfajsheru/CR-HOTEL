@@ -12,7 +12,7 @@ const Category = () => {
           cater to all tastes, from savory snacks to gourmet meals.
         </p>
       </div>
-      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-4 border-2 border-custom p-5 ">
+      <div className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-4 p-5 ">
         {menu_list.map((item, index) => {
           return (
             <div

@@ -24,19 +24,19 @@ const Navbar = () => {
       {/* Nav option */}
       <ul className="hidden sm:flex gap-5 text-sm sm:text-[17px] text-gray-700 font-nav-font ">
         <NavLink to={"/"} className="flex flex-col gap-1 items-center ">
-          <p className="hover:scale-105">Home</p>
+          <p className="nav-item text-[16px]">Home</p>
           <hr className="w-3/4 border-none h-[2px] bg-custom hidden" />
         </NavLink>
         <NavLink to={"/menu"} className="flex flex-col gap-1 items-center ">
-          <p className="hover:scale-105">Menu</p>
+          <p className="nav-item text-[16px]">Menu</p>
           <hr className="w-3/4 border-none h-[2px] bg-custom hidden" />
         </NavLink>
         <NavLink to={"/about"} className="flex flex-col gap-1 items-center ">
-          <p className="hover:scale-105">About</p>
+          <p className="nav-item text-[16px]">About</p>
           <hr className="w-3/4 border-none h-[2px] bg-custom hidden" />
         </NavLink>
         <NavLink to={"/contact"} className="flex flex-col gap-1 items-center ">
-          <p className="hover:scale-105">Contact Us</p>
+          <p className="nav-item text-[16px]">Contact Us</p>
           <hr className="w-3/4 border-none h-[2px] bg-custom hidden" />
         </NavLink>
       </ul>
@@ -44,12 +44,12 @@ const Navbar = () => {
       {/* Action Bar */}
       <div className="flex items-center gap-6">
         <div className="flex flex-col items-center cursor-pointer ">
-          <IoSearchSharp className="text-2xl text-custom hover:scale-75" />
+          <IoSearchSharp className="text-2xl text-custom icon" />
           <p className="text-[9px]">search</p>
         </div>
 
         <div className="flex flex-col items-center cursor-pointer ">
-          <MdOutlineFavoriteBorder className="text-2xl text-custom hover:scale-75" />
+          <MdOutlineFavoriteBorder className="text-2xl text-custom icon" />
           <p className="text-[9px]">Favorite</p>
         </div>
 
@@ -57,11 +57,11 @@ const Navbar = () => {
           to={"/cart"}
           className="flex flex-col items-center cursor-pointer "
         >
-          <MdOutlineLocalGroceryStore className="text-2xl text-custom hover:scale-75" />
+          <MdOutlineLocalGroceryStore className="text-2xl text-custom icon" />
           <p className="text-[9px]">Cart</p>
         </Link>
         <div className="hidden sm:flex flex-col items-center cursor-pointer ">
-          <CgProfile className="text-2xl text-custom hover:scale-75" />
+          <CgProfile className="text-2xl text-custom icon" />
           <p className="text-[9px]">Profile</p>
         </div>
         <div
@@ -69,7 +69,7 @@ const Navbar = () => {
           className="flex flex-col items-center md:hidden"
         >
           <TiThMenu
-            className="text-2xl text-custom cursor-pointer hover:scale-75 "
+            className="text-2xl text-custom cursor-pointer icon "
             onClick={() => setVisible(true)}
           />
           <p className="text-[9px]">Menu</p>

@@ -21,10 +21,10 @@ const Footer = () => {
           Thank you so much for your valuable time
         </p>
         <div className="flex gap-1">
-          <FaFacebookSquare className="text-2xl sm:text-3xl" />
-          <FaSquareInstagram className="text-2xl sm:text-3xl" />
-          <IoLogoLinkedin className="text-2xl sm:text-3xl" />
-          <FaSquareXTwitter className="text-2xl sm:text-3xl" />
+          <FaFacebookSquare className="text-2xl sm:text-3xl icon" />
+          <FaSquareInstagram className="text-2xl sm:text-3xl icon" />
+          <IoLogoLinkedin className="text-2xl sm:text-3xl icon" />
+          <FaSquareXTwitter className="text-2xl sm:text-3xl icon" />
         </div>
       </div>
   

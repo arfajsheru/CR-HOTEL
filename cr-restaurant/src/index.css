@@ -96,8 +96,31 @@
   }
 }
 
+/* Icon animation hover */
 
+.icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
 
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Navigation Item Animation */
+
+.nav-item { 
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #ad954f; /* Change color on hover */
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
 
 /* ---------- Navbar Hr Edite ---------- */
 
@@ -120,6 +143,9 @@
 
 a.active hr{
     display: block;
+}
+a.active p{
+  color: #ad954f;
 }
 
 .style-font{
