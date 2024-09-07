@@ -12,6 +12,7 @@ import PlaceOrder from './PlaceOrder';
 import Navbar from "./component/Navbar";
 import Footer from './component/Footer';
 import logo from "/logo3.png"
+import CategoryItems from "./pages/CategoryItems"
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -44,7 +45,8 @@ const App = () => {
             <Route path='/order' element={<Order />} />
             <Route path='/login' element={<Login />} />
             <Route path='/place-order' element={<PlaceOrder />} />
-            <Route path='/product/:id' element={<Product />} />
+            <Route path='/product/:productId' element={<Product />} />
+            <Route path='/categoryItem/:category' element={<CategoryItems />} />
           </Routes>
           <Footer />
         </>

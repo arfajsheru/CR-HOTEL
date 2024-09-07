@@ -1,29 +1,29 @@
 import React from "react";
 import { foodItems } from "../assets/assets";
+import ProductItem from "../component/ProductItem";
+import fooditem3 from "../assets/foodimages/fooditem3.jpg";
 const Menu = () => {
+  
+  const item = 
+  {
+      id: "3",
+      name: "Tomato salad",
+      description: "Grilled paneer cubes marinated with spices.",
+      current_Price: 40,
+      original_Price: 60,
+      offer: 50,
+      category: "Veg",
+      subCategory: "Dahi salad",
+      image: fooditem3,
+      rating: { stars: 4.7, view: 1600 }
+    };
   return (
-    <div className="flex justify-between flex-wrap w-full h-full mt-5 md:gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 w-full h-full mt-5 md:gap-3">
       {foodItems.map((item, index) => {
-        return <div className="flex flex-wrap flex-col">
-        <img src={item.image} className="w-28 h-36  md:w-48 md:h-60 object-cover category-img" alt="img dahi ratika" />
-        <p>{item.name}</p>
-        <p>{item.id}</p>
-        {/* <p>{item.desciption}</p> */}
-        <div className="flex gap-1">
-        <p>300</p>
-        <p>200</p>
-        <p>50% OFF</p>
-        </div>
-        <div className="flex gap-1">
-        <p>{item.rating.stars}</p>
-        <p>{item.rating.view}</p>
-        </div>
-        <p>{item.category}</p>
-        <p>not difine</p>
-        
-        </div>;
+        return (
+          <ProductItem key={index} id={item.id} image={item.image} current_Price={item.current_Price} original_Price={item.original_Price} offer={item.offer} name={item.name} category={item.category} subCategory={item.subCategory} rating={item.rating} />
+        )
       })}
-      
     </div>
   );
 };

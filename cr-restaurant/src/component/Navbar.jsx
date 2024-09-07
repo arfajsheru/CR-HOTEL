@@ -6,7 +6,10 @@ import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { MdOutlineLocalGroceryStore } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { TiThMenu } from "react-icons/ti";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import { IoHome,IoCallSharp } from "react-icons/io5";
+import { RxCross2 } from "react-icons/rx";
+import { BiMenu } from "react-icons/bi";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
@@ -59,7 +62,9 @@ const Navbar = () => {
         >
           <MdOutlineLocalGroceryStore className="text-2xl text-custom icon" />
           <p className="text-[9px] relative">Cart</p>
-          <p className="absolute right-1 top-[-13px] rounded-full bg-custom text-[10px] w-4 h-4 text-center  ">10</p>
+          <p className="absolute right-1 top-[-11px] rounded-full bg-custom text-[10px] w-4 h-4 text-center  ">
+            10
+          </p>
         </Link>
         <div className="hidden sm:flex flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom icon" />
@@ -80,50 +85,56 @@ const Navbar = () => {
       {/* sidebar Menu */}
 
       <div
-        className={`absolute top-0 right-0 bottom-0 left-0 overflow-hidden transition-all bg-white ${
-          visible ? "w-full h-full z-50" : "w-0 h-0"
+        className={`absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
+          visible ? "translate-x-0 w-full z-50" : "-translate-x-full w-0"
         }`}
       >
         <div className="flex flex-col">
-          <div className=" flex justify-between py-2 px-2 border-b bg-black text-custom">
+          <div className="flex justify-between py-2 px-2 pl-6 border-b ">
+           <div className="flex gap-[5px] items-center">
+            <CgProfile className="text-[20px]" />
+            <p>Profile</p>
+            </div>
             <div
               onClick={() => setVisible(false)}
-              className="flex gap-1 items-center "
+              className="flex gap-1 items-center cursor-pointer"
             >
-              <IoMdArrowRoundBack />
-              <p>Back</p>
+              <RxCross2 />
+            
             </div>
-            <CgProfile className="text-2xl" />
           </div>
 
           <div className="flex flex-col">
-
             <NavLink
               onClick={() => setVisible(false)}
-              to={"/"}
-              className="py-2 px-7 border-b bg-custom   hover:bg-black hover:text-custom"
+              to="/"
+              className="py-2 px-7 border-b flex items-center gap-2"
             >
+              <IoHome />
               Home
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
-              to={"/menu"}
-              className="py-2 px-7 border-b bg-custom   hover:bg-black hover:text-custom"
+              to="/menu"
+              className="py-2 px-7 border-b flex items-center gap-2"
             >
+              <BiMenu />
               Menu
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
-              to={"/about"}
-              className="py-2 px-7 border-b bg-custom   hover:bg-black hover:text-custom"
+              to="/about"
+              className="py-2 px-7 border-b flex items-center gap-2"
             >
+              <i className="fa-regular fa-address-card"></i>
               About
             </NavLink>
             <NavLink
               onClick={() => setVisible(false)}
-              to={"/contact"}
-              className="py-2 px-7 border-b bg-custom  hover:bg-black hover:text-custom"
+              to="/contact"
+              className="py-2 px-7 border-b flex items-center gap-2"
             >
+              <IoCallSharp />
               Contact Us
             </NavLink>
           </div>
