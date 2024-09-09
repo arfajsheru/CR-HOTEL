@@ -23,7 +23,7 @@ const CategoryItems = () => {
   return (
     <div className="pt-8">
       {/* Category Title */}
-      <div className="text-3xl text-center flex items-center justify-between pr-[40%]">
+      <div className="text-3xl text-center flex items-center justify-between md:pr-[40%]">
       <div
         onClick={handleBackButton}
         className="flex items-center justify-center py-2 text-custom cursor-pointer hover:text-black w-16 gap-0  transition-all duration-700 text-[18px] font-semibold "
