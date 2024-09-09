@@ -29,19 +29,19 @@ const Footer = () => {
       </div>
   
       {/* Contact Info */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 ">
         <h2 className="text-1xl font-nav-font font-bold md:text-3xl">Contact Us</h2>
         <div className="text-[12px] flex flex-col gap-2">
-          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 font-mono transition-transform duration-700 md:text-[16px]">
+          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 transition-transform duration-700 md:text-[16px]">
             <IoCallSharp />+91 9913690041
           </p>
-          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 font-mono transition-transform duration-700 md:text-[16px]">
+          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 transition-transform duration-700 md:text-[16px]">
             <IoCallSharp />+91 9898321112
           </p>
-          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 font-mono transition-transform duration-700 md:text-[16px]">
+          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 transition-transform duration-700 md:text-[16px]">
             <SiGmail />caferajasthan@gmail.com
           </p>
-          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 font-mono transition-transform duration-700 md:text-[16px]">
+          <p className="flex gap-1 md:gap-2 items-center hover:scale-x-95 transition-transform duration-700 md:text-[16px]">
             <FaLocationArrow />India, West Street - +91
           </p>
         </div>
@@ -62,13 +62,13 @@ const Footer = () => {
   
       {/* Subscribe */}
       <div className="flex flex-col gap-6">
-        <h2 className="text-1xl font-nav-font font-bold md:text-3xl">Subscribe Us</h2>
+        <h2 className="text-1xl font-nav-font font-bold md:text-3xl ">Subscribe Us</h2>
         <p className="font-mono text-[12px] md:text-[16px] hover:scale-x-95 transition-transform duration-700">
           Subscribe for latest updates
         </p>
         <div className="flex flex-col gap-2">
           <input type="text" className="bg-white outline-none border-none h-8 w-full px-2 rounded-sm text-[12px] text-black" placeholder="Enter your Email" />
-          <button className="bg-black w-full py-1 border border-white hover:bg-custom hover:text-black transition-colors duration-1000">Subscribe</button>
+          <button className="bg-black rounded w-full py-1 border border-white hover:bg-custom hover:text-black transition-colors duration-1000">Subscribe</button>
         </div>
       </div>
     </div>

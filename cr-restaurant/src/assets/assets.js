@@ -217,7 +217,7 @@ export const foodItems = [
     original_Price: 55, // Example original price
     offer: 15, // Example discount
     category: "Non-Veg",
-    subCategory: "",
+    subCategory: "Dahi salad",
     image: fooditem4,
     rating: { stars: 4.8, view: 2000 },
   },
@@ -321,7 +321,7 @@ export const foodItems = [
     id: "13",
     name: "Panner Crispy",
     description: "Smoky eggplant curry with spices.",
-    current_Price: null,
+    current_Price: 220,
     original_Price: 200, // Example original price
     offer: null,
     category: "Veg",

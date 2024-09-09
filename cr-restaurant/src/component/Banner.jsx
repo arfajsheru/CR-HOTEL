@@ -49,7 +49,7 @@ const Banner = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      return '<span className="' + className + '">' + (index + 1) + '</span>';
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
   };
 
@@ -76,7 +76,7 @@ const Banner = () => {
                 className="object-cover brightness-50  w-full h-full md:h-[88vh] banner-img"
               />
               {/* Text content */}
-              <div className=" text-content flex flex-col  gap-3 w-[75%] md:w-[40%] absolute top-1/2 left-12 sm:left-24  lg:top-2/4 transform -translate-y-1/2  text-white">
+              <div className="text-content flex flex-col  gap-3 w-[75%] md:w-[40%] absolute top-1/2 left-12 sm:left-24  lg:top-2/4 transform -translate-y-1/2  text-white">
                 <div className="flex flex-col gap-2 sm:gap-4">
                   <p className="text-3xl sm:text-4xl font-bold style2-font">
                     {banner.title}

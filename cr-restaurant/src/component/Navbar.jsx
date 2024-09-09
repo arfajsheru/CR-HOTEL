@@ -51,9 +51,12 @@ const Navbar = () => {
           <p className="text-[9px]">search</p>
         </div>
 
-        <div className="flex flex-col items-center cursor-pointer ">
-          <MdOutlineFavoriteBorder className="text-2xl text-custom icon" />
+        <div className="flex flex-col items-center cursor-pointer relative ">
+          <MdOutlineFavoriteBorder className="text-2xl text-custom icon " />
           <p className="text-[9px]">Favorite</p>
+          <p className="absolute right-[-2px] top-[-8px] w-4 leading-4 bg-custom aspect-square text-center rounded-[7px]  text-[9px] font-bold font-mono">
+            99
+          </p>
         </div>
 
         <Link
@@ -62,9 +65,10 @@ const Navbar = () => {
         >
           <MdOutlineLocalGroceryStore className="text-2xl text-custom icon" />
           <p className="text-[9px] relative">Cart</p>
-          <p className="absolute right-1 top-[-11px] rounded-full bg-custom text-[10px] w-4 h-4 text-center  ">
-            10
+          <p className="absolute right-[-2px] top-[-8px] w-4 leading-4 bg-custom aspect-square text-center rounded-[7px]  text-[9px] font-bold font-mono">
+            99
           </p>
+          {/* <p className=" absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square  text-[8px]"></p> */}
         </Link>
         <div className="hidden sm:flex flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom icon" />
@@ -83,10 +87,10 @@ const Navbar = () => {
       </div>
 
       {/* sidebar Menu */}
-
+      
       <div
         className={`absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
-          visible ? "translate-x-0 w-full z-50" : "-translate-x-full w-0"
+          visible ? "translate-x-0 w-[80vw] z-50" : "-translate-x-full w-0"
         }`}
       >
         <div className="flex flex-col">
@@ -140,7 +144,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div> 
+ 
   );
 };
 
