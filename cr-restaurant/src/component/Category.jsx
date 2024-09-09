@@ -1,14 +1,15 @@
 import React from "react";
 import Title from "./Title";
 import { menu_list } from "../assets/assets";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 const Category = () => {
 
   return (
-    <div className="text-center text-1xl onscroll">
+    <div className="text-center text-1xl onscroll animate-fadeInUp">
       <div className="py-8 text-center  sm:text-2xl md:text-3xl">
         <Title text1={"CATEGORY"} text2={"FOOD ITEMS"} />
-        <p className="text-sm font-md font-nav-font text-gray-600">
+        
+        <p className="text-sm font-md font-nav-font text-gray-600 animate-fadeInUp">
           "Discover a wide range of delicious and fresh{" "}
           <span className="text-gray-800 font-lora-font">food items</span> that
           cater to all tastes, from savory snacks to gourmet meals".

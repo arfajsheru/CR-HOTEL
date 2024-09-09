@@ -54,7 +54,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full  h-full md:h-[88vh] overflow-hidden onscroll">
+    <div className="relative w-full  h-full md:h-[88vh] overflow-hidden rounded-md onscroll animate-fadeInUp">
       <Swiper
        modules={[Navigation, Pagination, Autoplay]}
        navigation

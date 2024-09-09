@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { IoChevronBack } from "react-icons/io5";
-import { FaLeaf, FaBox, FaClock} from 'react-icons/fa';
 import CodIcon from "../assets/Cod.png"
 import DeliverIcon from "../assets/delivery.png"
 import Freshness from "../assets/fresh.png"
