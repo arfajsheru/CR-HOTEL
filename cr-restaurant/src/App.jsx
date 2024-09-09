@@ -13,6 +13,7 @@ import Navbar from "./component/Navbar";
 import Footer from './component/Footer';
 import logo from "/logo3.png"
 import CategoryItems from "./pages/CategoryItems"
+import Wishlist from './pages/Wishlist';
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -46,7 +47,8 @@ const App = () => {
             <Route path='/login' element={<Login />} />
             <Route path='/place-order' element={<PlaceOrder />} />
             <Route path='/product/:productId' element={<Product />} />
-            <Route path='/categoryItem/:category' element={<CategoryItems />} />
+            <Route path='/categoryItem/:category' element={<CategoryItems />}/>
+            <Route path='/wishlist' element={<Wishlist />}/>
           </Routes>
           <Footer />
         </>
