@@ -1,19 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
-import { foodItems } from "../assets/assets";
+import React, { useContext, useEffect,useState } from "react";
 import ProductItem from "../component/ProductItem";
 import Title from "../component/Title";
 import { menu_list } from "../assets/assets";
 import { RxCross2 } from "react-icons/rx";
 import vectore from "../assets/vector.png"
+import { ShopContext } from "../context/ShopContext";
 const Menu = () => {
-  const [showFilter, setShowFilter] = useState(false);
+  const {foodItems,category,setCategory,subCategory,setSubCategory} = useContext(ShopContext);
   const [filterProduct, setFilterProduct] = useState(foodItems);
-  const [category, setCategory] = useState([]);
-  const [subCategory, setSubCategory] = useState([]);
   const [isVegSelected, setIsVegSelected] = useState(false); // State to toggle Veg indicator
   const [isNonVegSelected, setIsNonVegSelected] = useState(false);
   const [IshowFilter, setIShowFilter] = useState(false);
-
+  const [sorttype,setSortType] = useState('Relavent')
 
   // Category Filter Methode
   const handleToggleCategory = (e) => {
@@ -42,7 +40,7 @@ const Menu = () => {
   };
   // All Filter Applay Methode
   const applyfilter = () => {
-    let foodItemsCopy = foodItems;
+    let foodItemsCopy = foodItems.slice();
     if (category.length > 0) {
       foodItemsCopy = foodItemsCopy.filter((item) =>
         category.includes(item.category)
@@ -57,6 +55,28 @@ const Menu = () => {
     setFilterProduct(foodItemsCopy);
   };
 
+
+  const filterSortPrice = () => {
+    let fpcopy = filterProduct.slice();
+
+    switch(sorttype){
+      case 'Low-high':
+        setFilterProduct(fpcopy.sort((a,b) => a.current_Price - b.current_Price));
+        break;
+
+      case 'High-low':
+        setFilterProduct(fpcopy.sort((a,b) => b.current_Price - a.current_Price));
+        break;
+
+      default :
+        applyfilter();
+        break
+    }
+  }
+
+  useEffect(() => {
+    filterSortPrice();
+  },[sorttype])
   //Handle Veg click 
   const handleVegClick = () => {
     setIsVegSelected(!isVegSelected);
@@ -68,18 +88,40 @@ const Menu = () => {
     setIsNonVegSelected(!isNonVegSelected);
     setIsVegSelected(false);
   };
+
+  const handleClearAllFilter = () => {
+    setIsVegSelected(!isVegSelected);
+    setIsNonVegSelected(!isNonVegSelected);
+    setFilterProduct(foodItems);
+  }
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10">
       {/* Filter Option side */}
       <div className="min-w-60">
+        <div className="flex items-center justify-between ">
         <p
           onClick={() => setIShowFilter(!IshowFilter)}
-          className="my-2 text-xl text-gray-600 font-nav-font hidden sm:block"
+          className="my-2 text-xl text-gray-900 font-medium  hidden sm:block"
         >
           {/* Filter Title */}
          
           Filter
         </p>
+
+        <button
+          onClick={applyfilter}
+          className={` hidden w-1/4 h-8 font-medium rounded-sm bg-custom  sm:block`}
+        >
+          Apply
+        </button>
+        <button
+          onClick={handleClearAllFilter}
+          className={` hidden w-auto px-2 h-8 font-medium rounded-sm bg-custom  sm:block`}
+        >
+          Clear All
+        </button>
+        </div>
+     
         <p
           onClick={() => setIShowFilter(!IshowFilter)}
           className="my-2 text-[16px] text-gray-600 font-nav-font cursor-pointer sm:hidden"
@@ -231,13 +273,6 @@ const Menu = () => {
             </p>
           </div>
         </div>
-        {/* Apply Filter */}
-        <button
-          onClick={applyfilter}
-          className={` hidden w-28 mt-4 h-9 font-bold text-white bg-custom border border-black sm:block`}
-        >
-          Apply
-        </button>
       </div>
 
       <div
@@ -354,7 +389,7 @@ const Menu = () => {
             applyfilter(); // Call your applyFilter function
             setIShowFilter(!IshowFilter); // Toggle the filter state
           }}
-          className="bg-custom w-[40%] h-10 font-medium text-xl border-2 border-black">Apply</button>
+          className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Apply</button>
         </div>
       </div>
 
@@ -362,10 +397,12 @@ const Menu = () => {
       <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-2">
           <Title text1={"ALL FOOD"} text2={"ITEMS"} />
-          <select className="text-sm border-2 border-gray-700 px-2 h-8  rounded-sm outline-none ">
-            <option value={"Relavent"}>Sort by: Relavent</option>
-            <option value={"Low-high"}>Sort by: Low-high</option>
-            <option value={"High-low"}>Sort by: High-low</option>
+          <select className="text-sm border-2 border-gray-700 px-2 h-8  rounded-sm outline-none"
+          onChange={(e) => setSortType(e.target.value)}
+          >
+            <option value="Relavent">Sort by: Relavent</option>
+            <option value="Low-high">Sort by: Low-high</option>
+            <option value="High-low">Sort by: High-low</option>
           </select>
         </div>
 

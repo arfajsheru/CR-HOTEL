@@ -38,6 +38,9 @@ const Product = () => {
     if (views >= 1000) return (views / 1000).toFixed(1) + 'K'; // Thousand ke liye
     return views; // Agar 1K se kam hai to original number dikhao
   };
+  useEffect(() => {
+    window.scroll(0,0);
+  })
   return (
     <div className="animate-fadeInDown">
       <div
@@ -53,7 +56,7 @@ const Product = () => {
         <div className="relative">
           <img
             src={itemfilter.image}
-            className="w-full h-[450px] md:w-[450px] md:h-[550px] object-cover"
+            className="w-full h-[450px] md:w-[450px] rounded-md md:h-[550px] object-cover"
             alt=""
           />
 

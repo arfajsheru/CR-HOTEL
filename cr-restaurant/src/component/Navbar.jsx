@@ -28,8 +28,9 @@ const Navbar = () => {
   },[]);
 
   return (
+    <>
     <div
-      className={`flex items-center justify-between py-1 font-medium ${scrolled ? "sticky-header" : " "} `}
+      className={`flex items-center justify-between py-1 px-2 font-medium ${scrolled ? "sticky-header" : "" }`}
     >
       <Link to={"/"}>
         <img
@@ -99,12 +100,12 @@ const Navbar = () => {
           <p className="text-[9px]">Menu</p>
         </div>
       </div>
-
+      </div>
       {/* sidebar Menu */}
       
       <div
-        className={`fixed top-0 right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
-          visible ? "translate-x-0 w-[80vw] z-50" : "-translate-x-full w-0"
+        className={`fixed right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
+          visible ? "translate-x-0 w-[80vw] h-[92vh] z-50" : "-translate-x-full w-0"
         }`}
       >
         <div className="flex flex-col">
@@ -157,9 +158,8 @@ const Navbar = () => {
             </NavLink>
           </div>
         </div>
-      </div>
-      </div> 
- 
+      </div>    
+      </>
   );
 };
 
