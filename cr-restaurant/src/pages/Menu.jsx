@@ -4,7 +4,7 @@ import ProductItem from "../component/ProductItem";
 import Title from "../component/Title";
 import { menu_list } from "../assets/assets";
 import { RxCross2 } from "react-icons/rx";
-import { IoIosArrowForward } from "react-icons/io";
+import vectore from "../assets/vector.png"
 const Menu = () => {
   const [showFilter, setShowFilter] = useState(false);
   const [filterProduct, setFilterProduct] = useState(foodItems);
@@ -74,13 +74,21 @@ const Menu = () => {
       <div className="min-w-60">
         <p
           onClick={() => setIShowFilter(!IshowFilter)}
-          className="my-2 text-xl text-gray-600 font-nav-font flex gap-1 items-center cursor-pointer"
+          className="my-2 text-xl text-gray-600 font-nav-font hidden sm:block"
         >
           {/* Filter Title */}
+         
           Filter
-          <IoIosArrowForward
-            className={`hidden sm:hidden ${showFilter ? "rotate-90" : ""}`}
-          />
+        </p>
+        <p
+          onClick={() => setIShowFilter(!IshowFilter)}
+          className="my-2 text-[16px] text-gray-600 font-nav-font cursor-pointer sm:hidden"
+        >
+          {/* Filter Title */}
+          <div className="flex items-center justify-center w-20 rounded-lg  bg-gray-200 ">
+          <img src={vectore} className="w-5" alt="" />
+            Filter
+          </div>
         </p>
 
         {/* Category Section */}
@@ -235,7 +243,7 @@ const Menu = () => {
       <div
         className={`fixed right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
           IshowFilter
-            ? "-translate-y-0 w-full h-[90vh] z-50"
+            ? "-translate-y-0 w-full h-[80vh] z-50"
             : "translate-y-full w-0"
         } sm:hidden`}
       >
