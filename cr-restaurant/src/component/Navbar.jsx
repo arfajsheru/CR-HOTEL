@@ -12,10 +12,24 @@ import { BiMenu } from "react-icons/bi";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScoll = () => {
+    const offset = window.scrollY;
+    if(offset > 200) {
+      setScrolled(true);
+    } else{
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScoll);
+  },[]);
 
   return (
     <div
-      className={` flex items-center justify-between py-1 font-medium `}
+      className={`flex items-center justify-between py-1 font-medium ${scrolled ? "sticky-header" : " "} `}
     >
       <Link to={"/"}>
         <img
@@ -89,7 +103,7 @@ const Navbar = () => {
       {/* sidebar Menu */}
       
       <div
-        className={`absolute top-0 right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
+        className={`fixed top-0 right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
           visible ? "translate-x-0 w-[80vw] z-50" : "-translate-x-full w-0"
         }`}
       >
