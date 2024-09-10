@@ -7,13 +7,15 @@ import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowForward } from "react-icons/io";
 const Menu = () => {
   const [showFilter, setShowFilter] = useState(false);
-  const [filterProduct, setFilterProduct] = useState([]);
+  const [filterProduct, setFilterProduct] = useState(foodItems);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [isVegSelected, setIsVegSelected] = useState(false); // State to toggle Veg indicator
   const [isNonVegSelected, setIsNonVegSelected] = useState(false);
   const [IshowFilter, setIShowFilter] = useState(false);
 
+
+  // Category Filter Methode
   const handleToggleCategory = (e) => {
     const value = e.currentTarget.dataset.value;
     // Agar selected category already selected hai, toh uncheck kare
@@ -30,6 +32,7 @@ const Menu = () => {
     }
   };
 
+  // SubCategory Filter Mehode
   const handleToggleSubCategory = (e) => {
     if (subCategory.includes(e.target.value)) {
       setSubCategory((prev) => prev.filter((item) => item !== e.target.value));
@@ -37,7 +40,7 @@ const Menu = () => {
       setSubCategory((prev) => [...prev, e.target.value]);
     }
   };
-
+  // All Filter Applay Methode
   const applyfilter = () => {
     let foodItemsCopy = foodItems;
     if (category.length > 0) {
@@ -54,15 +57,13 @@ const Menu = () => {
     setFilterProduct(foodItemsCopy);
   };
 
-  useEffect(() => {
-    applyfilter();
-  }, [category, subCategory]);
-
+  //Handle Veg click 
   const handleVegClick = () => {
     setIsVegSelected(!isVegSelected);
     setIsNonVegSelected(false);
   };
 
+  //Handle Non-Veg Click 
   const handleNonvegClick = () => {
     setIsNonVegSelected(!isNonVegSelected);
     setIsVegSelected(false);
@@ -243,9 +244,12 @@ const Menu = () => {
           <p className="text-custom font-bold text-2xl ">Filter</p>
           <RxCross2 onClick={() => setIShowFilter(!IshowFilter)} />
         </div>
-        <div className="flex flex-col gap-5 p-5">
+
+
           {/* Filter content section */}
-          <div className="flex flex-col gap-2 p-2 bg-gray-200">
+        <div className="flex flex-col items-start gap-5 p-5"> 
+             {/* Catergory  */}
+          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200">
             <p className="text-sm font-medium">CATEGORY</p>
             <div
               data-value="Veg"
@@ -283,8 +287,9 @@ const Menu = () => {
               Non-Veg
             </div>
           </div>
-
-          <div className="flex flex-col gap-2 p-2 bg-gray-200">
+            
+            {/* SubCategory */}
+          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200">
             <p className="text-sm font-medium  ">SUBCATEGORY</p>
 
             <p className="flex gap-2">
@@ -336,6 +341,12 @@ const Menu = () => {
               Veg. Sauce
             </p>
           </div>
+          <button
+           onClick={() => {
+            applyfilter(); // Call your applyFilter function
+            setIShowFilter(!IshowFilter); // Toggle the filter state
+          }}
+          className="bg-custom w-[40%] h-10 font-medium text-xl border-2 border-black">Apply</button>
         </div>
       </div>
 
