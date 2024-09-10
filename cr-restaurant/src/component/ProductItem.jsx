@@ -4,11 +4,11 @@ import { MdOutlineFavoriteBorder } from "react-icons/md";
 const ProductItem = ({id,name,image,current_Price,original_Price,offer,category,subCategory,rating}) => {
 
   return (
-    <Link to={`/product/${id}`} className='flex flex-col p-1 border-2 justify-between animate-fadeInUp bg-white '>
+    <Link to={`/product/${id}`} className='flex flex-col border rounded p-1 justify-between animate-fadeInUp bg-white shadow-md hover:shadow-lg hover:shadow-black shadow-zinc-500 '>
         {/* Item img */}
         <d className=' relative overflow-hidden'>
         <MdOutlineFavoriteBorder className='absolute right-1 top-1 z-50 text-2xl text-white font-bold' />
-            <img src={image} className='w-full h-48 object-cover hover:scale-110 transition-all duration-1000'  alt="" />
+            <img src={image} className='w-full h-48 object-cover rounded hover:scale-110 transition-all duration-1000'  alt="" />
             
             {/* Item Rating */}
                 <div className='p-1  bg-[#fefefe6b] font-footer-font font-medium flex items-center justify-center text-[12px] absolute bottom-1 left-1 hover:bg-[#ffffffb7] '>

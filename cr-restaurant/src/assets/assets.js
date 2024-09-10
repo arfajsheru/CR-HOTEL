@@ -216,7 +216,7 @@ export const foodItems = [
     current_Price: 40,
     original_Price: 55, // Example original price
     offer: 15, // Example discount
-    category: "Non-Veg",
+    category: "Veg",
     subCategory: "Dahi salad",
     image: fooditem4,
     rating: { stars: 4.8, view: 2000 },
@@ -312,7 +312,7 @@ export const foodItems = [
     current_Price: 190,
     original_Price: 240, // Example original price
     offer: 50, // Example discount
-    category: "Non-Veg",
+    category: "Veg",
     subCategory: "Chinese Starter",
     image: fooditem12,
     rating: { stars: 4.6, view: 1700 },
@@ -445,7 +445,7 @@ export const foodItems = [
     current_Price: 70,
     original_Price: 85,
     offer: 15,
-    category: "Non-Veg",
+    category: "Veg",
     subCategory: "Soup",
     image: fooditem23,
     rating: { stars: 4.8, view: 2000 },
