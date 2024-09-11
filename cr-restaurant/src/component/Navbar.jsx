@@ -9,17 +9,23 @@ import { TiThMenu } from "react-icons/ti";
 import { IoHome,IoCallSharp } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { BiMenu } from "react-icons/bi";
+import { IoMdHome } from "react-icons/io";
+import { GiBoxUnpacking } from "react-icons/gi";
+import menuicon from "../assets/menu.png"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [scroll,setScroll] = useState(false)
 
   const handleScoll = () => {
     const offset = window.scrollY;
     if(offset > 200) {
       setScrolled(true);
+      scroll(true)
     } else{
       setScrolled(false);
+      setScroll(false)
     }
   };
 
@@ -85,7 +91,7 @@ const Navbar = () => {
           </p>
           {/* <p className=" absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square  text-[8px]"></p> */}
         </Link>
-        <div className="hidden sm:flex flex-col items-center cursor-pointer ">
+        <div className="flex-col items-center cursor-pointer ">
           <CgProfile className="text-2xl text-custom icon" />
           <p className="text-[9px]">Profile</p>
         </div>
@@ -159,6 +165,34 @@ const Navbar = () => {
           </div>
         </div>
       </div>    
+
+      <div className={`sm:hidden fixed bottom-0 h-[60px] bg-custom w-full z-50 border-t-2 border-gray-600 flex justify-around items-center ${scroll ? "sticky-header" : "" }`}>
+
+        <Link to={'/'} className="flex flex-col items-center text-3xl text-white cursor-pointer ">
+          <IoMdHome />
+          <p className="text-xs">Home</p>
+        </Link>
+
+        <Link to={'/cart'} className="flex flex-col items-center text-3xl text-white cursor-pointer ">
+          <MdOutlineLocalGroceryStore />
+          <p className="text-xs">Cart</p>
+        </Link>
+
+        <Link to={'/menu'} className="flex flex-col items-center cursor-pointer ">
+          <img className="w-8" src={menuicon} alt="" />
+          <p className="text-xs">Menu</p>
+        </Link>
+        
+        <Link to={'/wishlist'} className="flex flex-col items-center text-3xl text-white cursor-pointer ">
+          <MdOutlineFavoriteBorder />
+          <p className="text-xs">Wishlist</p>
+        </Link>
+
+        <Link to={'/order'} className="flex flex-col items-center text-3xl text-white cursor-pointer ">
+          <GiBoxUnpacking />
+          <p className="text-xs">Order</p>
+        </Link>
+      </div>
       </>
   );
 };

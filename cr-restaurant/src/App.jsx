@@ -45,11 +45,8 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/place-order" element={<PlaceOrder />} />
               <Route path="/product/:productId" element={<Product />} />
-              <Route
-                path="/categoryItem/:category"
-                element={<CategoryItems />}
-              />
-              <Route path="/wishlist" element={<Wishlist />} />
+              <Route path="/wishlist" element={<Wishlist/>} />
+              <Route path="/categoryItem/:category" element={<CategoryItems />}/>
             </Routes>
           </div>
           <Footer />

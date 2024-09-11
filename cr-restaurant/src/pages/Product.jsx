@@ -38,9 +38,10 @@ const Product = () => {
     if (views >= 1000) return (views / 1000).toFixed(1) + 'K'; // Thousand ke liye
     return views; // Agar 1K se kam hai to original number dikhao
   };
+  
   useEffect(() => {
     window.scroll(0,0);
-  })
+  },[])
   return (
     <div className="animate-fadeInDown">
       <div

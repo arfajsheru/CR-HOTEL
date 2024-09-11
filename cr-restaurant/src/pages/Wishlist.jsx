@@ -15,7 +15,7 @@ const Wishlist = () => {
     }
 
   return (
-    <div>Wishlist</div>
+    <div>working Progress....</div>
   )
 }
 
