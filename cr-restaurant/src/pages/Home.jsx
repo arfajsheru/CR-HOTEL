@@ -4,8 +4,10 @@ import Category from '../component/Category'
 import OurPolicy from '../component/OurPolicy'
 import Newsletter from '../component/Newsletter'
 import BestSellar from '../component/BestSellar'
+import useScrollRestoration from '../component/useScrollRestoration'
 
 const Home = () => {
+  useScrollRestoration();
   return (
     <div>
      <Banner />
