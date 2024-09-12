@@ -186,9 +186,12 @@ const Navbar = () => {
           <p className="text-xs">Menu</p>
         </Link>
 
-        <Link to={"/wishlist"} className="flex flex-col items-center text-3xl text-black cursor-pointer">
+        <Link to={"/wishlist"} className="flex flex-col items-center text-3xl text-black cursor-pointer relative">
           <MdOutlineFavoriteBorder />
           <p className="text-xs">Wishlist</p>
+          <p className="absolute right-[1px] top-[-5px] w-4 leading-4 text-white bg-black aspect-square text-center rounded-[7px] text-[13px] font-bold font-mono">
+              {wishlist.length}
+            </p>
         </Link>
 
         <Link to={"/order"} className="flex flex-col items-center text-3xl text-black cursor-pointer">

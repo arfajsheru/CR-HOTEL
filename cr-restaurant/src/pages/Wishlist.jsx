@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import ProductItem from "../component/ProductItem";
 import Title from "../component/Title";
 
 const Wishlist = () => {
+
+  useEffect(() => {
+    window.scroll(0,0);
+  },[])
   const { wishlist } = useContext(ShopContext);
   return (
     <div className="py-4">

@@ -5,15 +5,15 @@ import { ShopContext } from "../context/ShopContext";
 import { FcDislike } from "react-icons/fc";
 const ProductItem = ({ item }) => {
   const { wishlist, addToWhislist, removeToWishlist } = useContext(ShopContext);
-  const [isFovrite,setIsFovrite]= useState(true);
+  const [isFovrite,setIsFovrite]= useState(false);
 
   const handleWhislistItems = () => {
     if(wishlist.find(w => w.id === item.id)){
         removeToWishlist(item.id);
-        setIsFovrite(true)
+        setIsFovrite(false)
     } else {
         addToWhislist(item);
-        setIsFovrite(false)
+        setIsFovrite(true)
     }
   };
 
@@ -26,8 +26,10 @@ const ProductItem = ({ item }) => {
       <div className="relative overflow-hidden">
         <div className="w-[30%] bg-white cursor-pointer">
             {isFovrite ? 
-        <MdOutlineFavoriteBorder onClick={handleWhislistItems} className="absolute right-1 top-1 z-50 text-2xl text-white font-bold" /> :
-        <FcDislike onClick={handleWhislistItems} className="absolute right-1 top-1 z-50 text-2xl text-white font-bold" />}
+        <FcDislike onClick={handleWhislistItems} className="absolute right-1 top-1 z-50 text-2xl text-white font-bold" />
+        :
+        <MdOutlineFavoriteBorder onClick={handleWhislistItems} className="absolute right-1 top-1 z-50 text-2xl text-white font-bold" /> 
+        }
         </div>
         <Link to={`/product/${item.id}`}> 
         <img
