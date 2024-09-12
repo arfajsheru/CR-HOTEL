@@ -14,7 +14,10 @@ const Wishlist = () => {
       <div className=" text-2xl sm:text-3xl text-center">
         <Title text1={"WHISLIST"} text2={"ITEMS"} />
       </div>
-      {wishlist.length === 0 && <h1 className="text-6xl text-custom font-bold text-center my-64">NO PRODCUT HERE</h1>}
+      {wishlist.length === 0 && 
+      <div className="flex items-center justify-center h-[70vh]">
+        <h1 className="text-6xl text-custom font-bold text-center">NO PRODCUTS HERE</h1>
+      </div>}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 md:gap-4 mb-9 ">
         {wishlist.map((item, index) => (
           <ProductItem key={index} item={item} />
