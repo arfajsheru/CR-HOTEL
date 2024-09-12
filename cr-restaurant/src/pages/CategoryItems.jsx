@@ -40,7 +40,7 @@ const CategoryItems = () => {
         
        {categoryItems.map((item,index) => {
         return(
-        <ProductItem key={index} id={item.id} image={item.image} name={item.name} current_Price={item.current_Price} original_Price={item.original_Price} rating={item.rating} offer={item.offer} category={item.category} subCategory={item.subCategory} />
+        <ProductItem item={item} />
       )
        })}
       </div>
