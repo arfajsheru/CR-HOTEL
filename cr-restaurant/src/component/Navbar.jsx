@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo2 from "../assets/new-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
@@ -11,10 +11,12 @@ import { IoMdHome } from "react-icons/io";
 import { GiBoxUnpacking } from "react-icons/gi";
 import menuicon from "../assets/menu.png";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { wishlist } = useContext(ShopContext);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -77,13 +79,13 @@ const Navbar = () => {
             <p className="text-[9px]">Search</p>
           </div>
 
-          <div className="hidden sm:flex flex-col items-center cursor-pointer relative">
+          <Link to={'/wishlist'} className="hidden sm:flex flex-col items-center cursor-pointer relative">
             <MdOutlineFavoriteBorder className="text-2xl text-custom icon" />
             <p className="text-[9px]">Favorite</p>
             <p className="absolute right-[-2px] top-[-8px] w-4 leading-4 bg-custom aspect-square text-center rounded-[7px] text-[9px] font-bold font-mono">
-              99
+              {wishlist.length}
             </p>
-          </div>
+          </Link>
 
           <Link
             to={"/cart"}

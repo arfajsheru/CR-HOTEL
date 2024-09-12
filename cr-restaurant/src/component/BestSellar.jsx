@@ -25,7 +25,7 @@ const BestSellar = () => {
         </div>
         <div className='w-full h-full grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 mt-5 md:gap-3'>
             {bestSellar.map((item,index) => (
-                <ProductItem key={index} id={item.id} name={item.name} original_Price={item.original_Price} current_Price={item.current_Price} offer={item.offer} category={item.category} subCategory={item.subCategory} image={item.image} rating={item.rating} />
+                <ProductItem key={index} item={item}/>
             ))}
 
         </div>

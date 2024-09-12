@@ -127,7 +127,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <RelatedProdcuts category={itemfilter.category} subCategory={itemfilter.subCategory} />
+      <RelatedProdcuts category={itemfilter.category} subCategory={itemfilter.subCategory} itemfilter={itemfilter} />
     </div>
   );
 };

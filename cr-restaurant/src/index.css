@@ -414,6 +414,7 @@ a.active p{
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* ------------All componet render animation */
 
 @keyframes fadeInDown {
   from {
@@ -449,6 +450,11 @@ a.active p{
   background-repeat: repeat-x;
   transform: translateY(4px); /* Adjust vertical position */
 }
+
+
+
+
+
 
 
 

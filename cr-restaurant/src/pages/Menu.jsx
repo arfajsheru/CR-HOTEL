@@ -424,16 +424,8 @@ const Menu = () => {
           {filterProduct.map((item, index) => {
             return (
               <ProductItem
-                key={index}
-                id={item.id}
-                image={item.image}
-                current_Price={item.current_Price}
-                original_Price={item.original_Price}
-                offer={item.offer}
-                name={item.name}
-                category={item.category}
-                subCategory={item.subCategory}
-                rating={item.rating}
+              item={item}
+              key={index}
               />
             );
           })}

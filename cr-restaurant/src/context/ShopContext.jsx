@@ -8,6 +8,17 @@ const ShopContextProvider = (props) =>{
 
     const [category, setCategory] = useState([]);
     const [subCategory, setSubCategory] = useState([]);
+    const [wishlist, setWishlist] = useState([])
+
+
+    const addToWhislist = (item) => {
+        setWishlist((prev) => [...prev,item])
+    };
+
+
+    const removeToWishlist = (id) => {
+        setWishlist((prev) => prev.filter((item) => item.id !== id))
+    };
 
 
     const value = {
@@ -15,7 +26,12 @@ const ShopContextProvider = (props) =>{
         category,
         setCategory,
         subCategory,
-        setSubCategory
+        setSubCategory,
+        wishlist,
+        setWishlist,
+        addToWhislist,
+        removeToWishlist
+        
     }
 
     return (
