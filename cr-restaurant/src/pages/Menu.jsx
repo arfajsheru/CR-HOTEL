@@ -1,17 +1,19 @@
 import React, { useContext, useEffect,useState } from "react";
 import ProductItem from "../component/ProductItem";
 import Title from "../component/Title";
-import { menu_list } from "../assets/assets";
+import { IoChevronBack } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import vectore from "../assets/vector.png"
 import { ShopContext } from "../context/ShopContext";
+import { useNavigate } from "react-router-dom";
 const Menu = () => {
   const {foodItems,category,setCategory,subCategory,setSubCategory} = useContext(ShopContext);
   const [filterProduct, setFilterProduct] = useState(foodItems);
   const [isVegSelected, setIsVegSelected] = useState(false); // State to toggle Veg indicator
   const [isNonVegSelected, setIsNonVegSelected] = useState(false);
   const [IshowFilter, setIShowFilter] = useState(false);
-  const [sorttype,setSortType] = useState('Relavent')
+  const [sorttype,setSortType] = useState('Relavent');
+  const navigate = useNavigate()
 
   // Category Filter Methode
   const handleToggleCategory = (e) => {
@@ -94,8 +96,18 @@ const Menu = () => {
     setIsNonVegSelected(!isNonVegSelected);
     setFilterProduct(foodItems);
   }
+
+  const handleBackButton = () => {
+    navigate(-1);
+  };
+
+  useEffect(() => {
+    window.scroll(0,0);
+  })
+
   return (
     <div className="flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10">
+      
       {/* Filter Option side */}
       <div className="min-w-60">
         <div className="flex items-center justify-between ">
@@ -104,8 +116,10 @@ const Menu = () => {
           className="my-2 text-xl text-gray-900 font-medium  hidden sm:block"
         >
           {/* Filter Title */}
-         
-          Filter
+            <div className="flex gap-3 items-center">
+            <IoChevronBack className="cursor-pointer" onClick={handleBackButton} />  Filter
+            </div>
+          
         </p>
 
         <button
@@ -175,7 +189,7 @@ const Menu = () => {
         </div>
         {/* SubCategory Section */}
         <div
-          className={` hidden border border-gray-300 font-medium bg-gray-100 pl-5 py-3 mt-6 sm:block `}
+          className={` hidden border border-gray-300 font-medium bg-gray-100 pl-5 py-3 mt-6 sm:block`}
         >
           <p className="mb-3 text-sm font-medium  ">SUBCATEGORY</p>
           <div className="text-gray-700 font-medium flex flex-col gap-1">
@@ -332,7 +346,7 @@ const Menu = () => {
           </div>
             
             {/* SubCategory */}
-          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200">
+          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200  ">
             <p className="text-sm font-medium  ">SUBCATEGORY</p>
 
             <p className="flex gap-2">
@@ -397,7 +411,7 @@ const Menu = () => {
       <div className="flex-1">
         <div className="flex justify-between text-base sm:text-2xl mb-2">
           <Title text1={"ALL FOOD"} text2={"ITEMS"} />
-          <select className="text-sm border-2 border-gray-700 px-2 h-8  rounded-sm outline-none"
+          <select className="text-sm border-2 border-gray-700 px-2 h-8  rounded-sm outline-none cursor-pointer"
           onChange={(e) => setSortType(e.target.value)}
           >
             <option value="Relavent">Sort by: Relavent</option>

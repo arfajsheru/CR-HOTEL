@@ -176,7 +176,7 @@ export const foodItems = [
     id: "1",
     name: "Dahi Raita",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.!",
     current_Price: 40,
     original_Price: 60, // Example original price
     offer: 20, // Example discount

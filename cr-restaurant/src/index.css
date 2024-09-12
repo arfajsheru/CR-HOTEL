@@ -13,9 +13,18 @@
 }
 
 
-.sticky-header{
-  position: sticky;
-  animation: stickyHeader 0.3s ease forwards;
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30; /* Default z-index */
+  background-color: white;
+  transition: z-index 0.3s;
+}
+
+.menu-visible .sticky-header {
+  z-index: 10; /* Reduced when menu is visible */
 }
 
 @keyframes stickyHeader {

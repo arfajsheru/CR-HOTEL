@@ -6,7 +6,7 @@ const ProductItem = ({id,name,image,current_Price,original_Price,offer,category,
   return (
     <Link to={`/product/${id}`} className='flex flex-col border rounded p-1 justify-between animate-fadeInUp bg-white shadow-md hover:shadow-lg hover:shadow-black shadow-zinc-500 '>
         {/* Item img */}
-        <d className=' relative overflow-hidden'>
+        <div className='relative overflow-hidden'>
         <MdOutlineFavoriteBorder className='absolute right-1 top-1 z-50 text-2xl text-white font-bold' />
             <img src={image} className='w-full h-48 object-cover rounded hover:scale-110 transition-all duration-1000'  alt="" />
             
@@ -19,7 +19,7 @@ const ProductItem = ({id,name,image,current_Price,original_Price,offer,category,
                     <span className='text-[9px] font-bold leading-[10px]'>OFF</span>
                 </div>
                 
-        </d>
+        </div>
         {/*  */}
         <div className='flex flex-col gap-1'>
         <div className='flex text-[9px] gap-1 font-roboto font-bold text-gray-500'>
@@ -30,6 +30,7 @@ const ProductItem = ({id,name,image,current_Price,original_Price,offer,category,
         <div className='text-[14px] font-roboto font-medium'>
             {name}
         </div>
+        
         <div className='flex gap-2'>
             <span className='font-bold text-sm'>Rs.{current_Price}</span>
             <span className='text-gray-500 line-through text-sm'>Rs.{original_Price}</span>

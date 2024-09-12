@@ -5,6 +5,7 @@ import { IoChevronBack } from "react-icons/io5";
 import CodIcon from "../assets/Cod.png"
 import DeliverIcon from "../assets/delivery.png"
 import Freshness from "../assets/fresh.png"
+import RelatedProdcuts from "../component/RelatedProdcuts";
 const Product = () => {
   const [itemfilter, setItem] = useState(false);
   const { foodItems } = useContext(ShopContext);
@@ -126,6 +127,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <RelatedProdcuts category={itemfilter.category} subCategory={itemfilter.subCategory} />
     </div>
   );
 };
