@@ -8,7 +8,7 @@ import Freshness from "../assets/fresh.png"
 import RelatedProdcuts from "../component/RelatedProdcuts";
 const Product = () => {
   const [itemfilter, setItem] = useState(false);
-  const { foodItems } = useContext(ShopContext);
+  const { foodItems,addTocart } = useContext(ShopContext);
   const { productId } = useParams();
   const navigate = useNavigate();
 
@@ -109,7 +109,7 @@ const Product = () => {
                </div>
               }
           </div>
-          <button className="mt-5 md:mt-5 bg-custom text-black font-semibold border-2 border-black py-2 px-4 hover:bg-white hover:text-custom hover:border-custom  transition-colors duration-500">ADD TO CART</button>
+          <button onClick={() => addTocart(itemfilter.id)} className="mt-5 md:mt-5 bg-custom text-black font-semibold border-2 border-black py-2 px-4 hover:bg-white hover:text-custom hover:border-custom  transition-colors duration-500">ADD TO CART</button>
 
           <div className="text-sm text-gray-500 flex flex-col gap-1 mt-5">
               <p className="flex md:text-[18px] items-center gap-2">

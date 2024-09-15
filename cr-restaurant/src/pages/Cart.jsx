@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Title from "../component/Title";
 import { foodItems } from "../assets/assets";
 import { RxCross2 } from "react-icons/rx";
+import { ShopContext } from "../context/ShopContext";
 
 const Cart = () => {
-  const [cartItems, setcartItems] = useState([]);
 
+  const { cartitems, cartdata, setcartData } = useContext(ShopContext);
+
+ 
   useEffect(() => {
-    setcartItems(foodItems.slice(0, 9));
-  }, []);
-
+    let tempData = [];
+    // Use Object.entries to get both keys and values
+    for (const [id, quantity] of Object.entries(cartitems)) {
+        if (quantity > 0) {
+            tempData.push({
+                id: id,
+                quantity: quantity,
+            });
+        }
+    }
+    setcartData(tempData);
+}, [cartitems]);
   const discount = 10;
 
   return (
@@ -20,47 +32,50 @@ const Cart = () => {
           <div className="text-2xl md:text-3xl text-center">
             <Title text1={"YOUR"} text2={"CART"} />
           </div>
-          {cartItems.map((item, index) => (
-            <div
-              key={index}
-              className="relative border border-gray-200 p-1 flex w-full items-center justify-between md:gap-4 hover:bg-gray-50"
-            >
-              <div className="flex  justify-between gap-1 md:gap-4">
-                <img src={item.image} className="w-20 h-24" alt="" />
-                <div className="flex flex-col overflow-hidden justify-between w-44 md:min-w-[450px]">
-                  <p className=" text-xs md:text-lg text-gray-800 font-medium font-nav-font ">
-                    {item.name}
-                  </p>
-                  <div className="flex gap-1 items-end ">
-                    <p className="font-medium text-2xl text-gray-800">
-                      Rs.{item.current_Price}
+          {cartdata.map((item, index) => {
+            const productData = foodItems.find((food) => food.id === item.id)
+            return (
+              <div
+                key={index}
+                className="relative border border-gray-200 p-1 flex w-full items-center justify-between md:gap-4 hover:bg-gray-50"
+              >
+                <div className="flex  justify-between gap-1 md:gap-4">
+                  <img src={productData.image} className="w-20 h-24" alt="" />
+                  <div className="flex flex-col overflow-hidden justify-between w-44 md:min-w-[450px]">
+                    <p className=" text-xs md:text-lg text-gray-800 font-medium font-nav-font ">
+                      {productData.name}
                     </p>
-                    <p className="text-gray-500 line-through font-thin">
-                      Rs.{item.original_Price}
+                    <div className="flex gap-1 items-end ">
+                      <p className="font-medium text-2xl text-gray-800">
+                        Rs.{productData.current_Price}
+                      </p>
+                      <p className="text-gray-500 line-through font-thin">
+                        Rs.{productData.original_Price}
+                      </p>
+                    </div>
+                    <p className="text-orange-600 text-xs font-bold border text-center bg-white border-orange-600 w-16 p-1 mt-2 hover:bg-orange-600 hover:text-white hover:border-white transition-colors duration-700">
+                      {productData.offer}%OFF
                     </p>
                   </div>
-                  <p className="text-orange-600 text-xs font-bold border text-center bg-white border-orange-600 w-16 p-1 mt-2 hover:bg-orange-600 hover:text-white hover:border-white transition-colors duration-700">
-                    {item.offer}%OFF
-                  </p>
+                </div>
+                <div className="flex w-16 md:w-20 bg-white items-center justify-center text-gray-600 ">
+                  <span className="w-7 h-6 text-center font-medium bg-custom  cursor-pointer leading-5">
+                    -
+                  </span>
+                  <span className="w-8 h-6 text-center px-1 font-medium  md:font-bold border-gray-400">
+                    10
+                  </span>
+                  <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5">
+                    +
+                  </span>
+                </div>
+                <div></div>
+                <div className="absolute right-1 md:right-3 top-2">
+                  <RxCross2 className="md:text-2xl cursor-pointer" />
                 </div>
               </div>
-              <div className="flex w-16 md:w-20 bg-white items-center justify-center text-gray-600 ">
-                <span className="w-7 h-6 text-center font-medium bg-custom  cursor-pointer leading-5">
-                  -
-                </span>
-                <span className="w-8 h-6 text-center px-1 font-medium  md:font-bold border-gray-400">
-                  10
-                </span>
-                <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5">
-                  +
-                </span>
-              </div>
-              <div></div>
-              <div className="absolute right-1 md:right-3 top-2">
-                <RxCross2 className="md:text-2xl cursor-pointer" />
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className=" flex-1 px-3 md:px-7">
           <div className="text-2xl md:text-3xl text-center">
@@ -102,8 +117,7 @@ const Cart = () => {
             </div>
 
             {/* Proceed to Checkout Button */}
-            <button
-              className="mt-5 w-[50%] bg-custom font-medium text-black py-3 text-xs  md:text-xl uppercase  rounded-sm shadow-lg">
+            <button className="mt-5 w-[50%] bg-custom font-medium text-black py-3 text-xs  md:text-xl uppercase  rounded-sm shadow-lg">
               Proceed to Checkout
             </button>
           </div>
