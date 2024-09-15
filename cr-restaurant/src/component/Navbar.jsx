@@ -139,8 +139,8 @@ const Navbar = () => {
     }`}
   >
     <div className="flex flex-col">
-      <div className="bg-custom flex gap-1 items-center font-medium h-7 shadow-md">
-        <div onClick={() => setVisible(false)} className="cursor-pointer">
+      <div onClick={() => setVisible(false)}  className="bg-custom flex gap-1 items-center font-medium h-10 shadow-md cursor-pointer">
+        <div>
           <IoIosArrowBack />
         </div>
         <p>MY Account</p>
