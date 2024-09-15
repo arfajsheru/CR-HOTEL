@@ -420,7 +420,7 @@ const Menu = () => {
           </select>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6   gap-4 gap-y-4">
           {filterProduct.map((item, index) => {
             return (
               <ProductItem

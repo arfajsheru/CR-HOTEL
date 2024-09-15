@@ -30,7 +30,10 @@ const CategoryItems = () => {
       >
         <IoChevronBack /> Back
       </div>
+      <div className="text-2xl md:text-3xl text-center">
+
         <Title text1={`${category}`} text2={`item`} />
+      </div>
      
       </div>
       

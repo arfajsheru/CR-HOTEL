@@ -16,7 +16,7 @@ const Cart = () => {
     <div className="py-4">
       {/* Right side  */}
       <div className="flex flex-col md:flex-row gap-5 ">
-        <div className="flex flex-col gap-2 md:gap-3 p-2 bg-gray-100  w-full md:w-[60%]">
+        <div className="flex flex-col gap-2 md:gap-3 p-2  w-full md:w-[60%]">
           <div className="text-2xl md:text-3xl text-center">
             <Title text1={"YOUR"} text2={"CART"} />
           </div>
@@ -44,14 +44,14 @@ const Cart = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex w-16 md:w-20 bg-white items-center justify-center border border-gray-400 text-gray-600">
-                <span className="w-full text-center border-r-2 font-medium border-gray-400 cursor-pointer">
+              <div className="flex w-16 md:w-20 bg-white items-center justify-center text-gray-600 ">
+                <span className="w-7 h-6 text-center font-medium bg-custom  cursor-pointer leading-5">
                   -
                 </span>
-                <span className="w-full text-center px-1 font-medium  md:font-bold border-gray-400">
+                <span className="w-8 h-6 text-center px-1 font-medium  md:font-bold border-gray-400">
                   10
                 </span>
-                <span className="w-full text-center border-l-2 font-medium border-gray-400 cursor-pointer">
+                <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5">
                   +
                 </span>
               </div>
@@ -62,12 +62,12 @@ const Cart = () => {
             </div>
           ))}
         </div>
-        <div className="bg-gray-100 flex-1 px-3 md:px-7">
+        <div className=" flex-1 px-3 md:px-7">
           <div className="text-2xl md:text-3xl text-center">
             <Title text1={"CART"} text2={"TOTAL"} />
           </div>
           <div className="flex flex-col">
-            <div className="h-14 content-center bg-custom border-2 mt-3">
+            <div className="h-14 content-center bg-custom border-2 mt-5">
               <p className="text-xl md:text-2xl px-2 font-bold font-nav-font text-gray-800 uppercase">
                 Price Details{" "}
                 <span className="font-bold text-3xl text-white"> 3</span> items
