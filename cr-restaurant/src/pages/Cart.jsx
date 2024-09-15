@@ -22,6 +22,11 @@ const Cart = () => {
     }
     setcartData(tempData);
 }, [cartitems]);
+
+
+  useEffect(() => {
+    window.scroll(0,0);
+  },[])
   const discount = 10;
 
   return (
