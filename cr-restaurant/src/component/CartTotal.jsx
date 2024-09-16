@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
+import { useNavigate } from 'react-router-dom';
 
 const CartTotal = () => {
     const {getCartAmount,delivery_Fee,rupees,cartitems,cartdata} = useContext(ShopContext);
     const {totalAmount, totalOffer} = getCartAmount();
+    const navigate = useNavigate();
 
     
     const MRPtotal = totalAmount + totalOffer;
@@ -49,7 +51,7 @@ const CartTotal = () => {
       </div>
 
       {/* Proceed to Checkout Button */}
-      <button className="mt-5 w-[50%] bg-custom font-medium text-black py-3 text-xs  md:text-xl uppercase  rounded-sm shadow-lg">
+      <button onClick={() => navigate('/order')} className="mt-5 w-[50%] bg-custom font-medium text-black py-3 text-xs  md:text-xl uppercase  rounded-sm shadow-lg">
         Proceed to Checkout
       </button>
     </div>

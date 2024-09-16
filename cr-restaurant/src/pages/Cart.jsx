@@ -5,10 +5,12 @@ import { RxCross2 } from "react-icons/rx";
 import { ShopContext } from "../context/ShopContext";
 import CartTotal from "../component/CartTotal";
 import { FaOpencart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartitems, cartdata, setcartData, UpdateQuantity } =
     useContext(ShopContext);
+    const navigate = useNavigate()
 
   useEffect(() => {
     let tempData = [];
@@ -99,7 +101,7 @@ const Cart = () => {
               <span className="text-5xl md:text-8xl font-bold text-gray-300">
                 Empty Prodcut
               </span>
-              <button className="mt-10 w-[50%] md:w-[20%] bg-custom font-medium text-black py-3 text-xl  md:text-xl uppercase  rounded-sm shadow-lg">
+              <button onClick={() => navigate('/menu')} className="mt-10 w-[50%] md:w-[20%] bg-custom font-medium text-black py-3 text-xl  md:text-xl uppercase  rounded-sm shadow-lg">
                 Shop now
               </button>
             </div>

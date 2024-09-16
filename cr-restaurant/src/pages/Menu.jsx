@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import vectore from "../assets/vector.png"
 import { ShopContext } from "../context/ShopContext";
 import { useNavigate } from "react-router-dom";
+import { menu_list } from "../assets/assets";
 const Menu = () => {
   const {foodItems,category,setCategory,subCategory,setSubCategory} = useContext(ShopContext);
   const [filterProduct, setFilterProduct] = useState(foodItems);
@@ -128,12 +129,6 @@ const Menu = () => {
         >
           Apply
         </button>
-        <button
-          onClick={handleClearAllFilter}
-          className={` hidden w-auto px-2 h-8 font-medium rounded-sm bg-custom  sm:block`}
-        >
-          Clear All
-        </button>
         </div>
      
         <p
@@ -193,98 +188,16 @@ const Menu = () => {
         >
           <p className="mb-3 text-sm font-medium  ">SUBCATEGORY</p>
           <div className="text-gray-700 font-medium flex flex-col gap-1">
-            <p className="flex gap-2">
+            {menu_list.map((category) => (
+              <p className="flex gap-2">
               <input
                 type="checkbox"
-                value={"Dahi salad"}
+                value={category.menu_name}
                 onChange={handleToggleSubCategory}
               />
-              Dahi Salad
+              {category.menu_name}
             </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Chinese Starter"}
-                onChange={handleToggleSubCategory}
-              />
-              Chinese starter
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Soup"}
-                onChange={handleToggleSubCategory}
-              />
-              Soup
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Noodles"}
-                onChange={handleToggleSubCategory}
-              />
-              Noodles
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Fried Rice"}
-                onChange={handleToggleSubCategory}
-              />
-              Fried Rice
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Veg Sauce"}
-                onChange={handleToggleSubCategory}
-              />
-              Veg. Sauce
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Tandoory Dry
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Chicken Gravy
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Egg
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Mutton Gravy
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Paneer
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Prawns
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Vegetable
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Roti
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Birayani & Pulao
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Thali
-            </p>
-            <p className="flex gap-2">
-              <input type="checkbox" />
-              Dessert
-            </p>
+            ))}
           </div>
         </div>
       </div>
