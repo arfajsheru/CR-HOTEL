@@ -21,7 +21,7 @@ import discount from "../assets/discount.png";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { wishlist, getCartCount} = useContext(ShopContext);
+  const { wishlist, getCartCount } = useContext(ShopContext);
   const [information, setInformation] = useState(false);
 
   const handleScroll = () => {
@@ -233,11 +233,13 @@ const Navbar = () => {
 
         <Link
           to={"/cart"}
-          className="relative flex flex-col items-center text-3xl text-black cursor-pointer"
+          className="relative flex flex-col items-center text-2xl text-black cursor-pointer"
         >
           <MdOutlineLocalGroceryStore />
-          <p className="absolute right-[1px] top-[-5px] w-4 leading-4 text-white bg-black aspect-square text-center rounded-[7px] text-[13px] font-bold font-mono">{getCartCount()}</p>
-          <p className="text-xs">Cart</p>
+          <p className="absolute right-0 top-[-8px] w-4 h-4 flex items-center justify-center text-white bg-black rounded-full text-[11px] font-mono">
+            {getCartCount()}
+          </p>
+          <p className="text-xs mt-1">Cart</p>
         </Link>
 
         <Link
@@ -250,11 +252,11 @@ const Navbar = () => {
 
         <Link
           to={"/wishlist"}
-          className="flex flex-col items-center text-3xl text-black cursor-pointer relative"
+          className="relative flex flex-col items-center text-2xl text-black cursor-pointer"
         >
           <MdOutlineFavoriteBorder />
-          <p className="text-xs">Wishlist</p>
-          <p className="absolute right-[1px] top-[-5px] w-4 leading-4 text-white bg-black aspect-square text-center rounded-[7px] text-[13px] font-bold font-mono">
+          <p className="text-xs mt-1">Wishlist</p>
+          <p className="absolute right-0 top-[-8px] w-4 h-4 flex items-center justify-center text-white bg-black rounded-full text-[11px] font-bold font-mono">
             {wishlist.length}
           </p>
         </Link>
