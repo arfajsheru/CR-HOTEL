@@ -427,7 +427,7 @@ export const foodItems = [
     description: "Smoky eggplant curry with spices.",
     current_Price: 220,
     original_Price: 200, // Example original price
-    offer: null,
+    offer: 20,
     category: "Veg",
     subCategory: "Chinese Starter",
     image: fooditem13,
@@ -535,8 +535,8 @@ export const foodItems = [
     name: "veg Manchow soup",
     description: "Cheesy and spicy potato balls.",
     current_Price: 60,
-    original_Price: null,
-    offer: null,
+    original_Price: 90,
+    offer: 30,
     category: "Veg",
     subCategory: "Soup",
     image: fooditem22,
@@ -559,8 +559,8 @@ export const foodItems = [
     name: "veg noodle soup",
     description: "Spicy, flaky pastry filled with lentils or vegetables.",
     current_Price: 70,
-    original_Price: null,
-    offer: null,
+    original_Price: 100,
+    offer: 30,
     category: "Veg",
     subCategory: "Soup",
     image: fooditem24,
@@ -764,7 +764,7 @@ export const foodItems = [
     description: "Delicious egg hakka noodles with a perfect blend of spices.",
     current_Price: 60,
     original_Price: 80,
-    offer: "25",
+    offer: 25,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem41,
@@ -776,7 +776,7 @@ export const foodItems = [
     description: "Spicy and flavorful egg shezwan noodles.",
     current_Price: 70,
     original_Price: 90,
-    offer: "22",
+    offer: 22,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem42,
@@ -788,7 +788,7 @@ export const foodItems = [
     description: "Classic veg hakka noodles loaded with fresh vegetables.",
     current_Price: 90,
     original_Price: 110,
-    offer: "18",
+    offer: 18,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem43,
@@ -800,7 +800,7 @@ export const foodItems = [
     description: "Hot and spicy veg shezwan noodles with a tangy kick.",
     current_Price: 140,
     original_Price: 180,
-    offer: "22",
+    offer: 22,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem44,
@@ -812,7 +812,7 @@ export const foodItems = [
     description: "Triple delight of veg noodles with three amazing flavors.",
     current_Price: 140,
     original_Price: 160,
-    offer: "12",
+    offer: 12,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem45,
@@ -824,7 +824,7 @@ export const foodItems = [
     description: "Veg manchurian noodles with crispy veg balls.",
     current_Price: 140,
     original_Price: 170,
-    offer: "18",
+    offer: 18,
     category: "Veg",
     subCategory: "Noodles",
     image: fooditem46,
@@ -836,7 +836,7 @@ export const foodItems = [
     description: "Savory chicken fried rice with perfectly seasoned chicken.",
     current_Price: 60,
     original_Price: 80,
-    offer: "25",
+    offer: 25,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem47,
@@ -848,7 +848,7 @@ export const foodItems = [
     description: "Spicy shezwan fried rice with tender chicken pieces.",
     current_Price: 70,
     original_Price: 90,
-    offer: "22",
+    offer: 22,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem48,
@@ -860,7 +860,7 @@ export const foodItems = [
     description: "Exotic Hong Kong-style fried rice with chicken.",
     current_Price: 140,
     original_Price: 160,
-    offer: "12",
+    offer: 12,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem49,
@@ -872,7 +872,7 @@ export const foodItems = [
     description: "Malaysian-style fried rice with aromatic spices and chicken.",
     current_Price: 160,
     original_Price: 200,
-    offer: "20",
+    offer: 20,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem50,
@@ -884,7 +884,7 @@ export const foodItems = [
     description: "Triple fried rice with chicken, packed with flavors.",
     current_Price: 100,
     original_Price: 150,
-    offer: "33",
+    offer: 33,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem51,
@@ -896,7 +896,7 @@ export const foodItems = [
     description: "Manchurian-style fried rice with succulent chicken pieces.",
     current_Price: 100,
     original_Price: 150,
-    offer: "33",
+    offer: 33,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem52,
@@ -908,7 +908,7 @@ export const foodItems = [
     description: "Combo fried rice with a spicy shezwan twist.",
     current_Price: 120,
     original_Price: 150,
-    offer: "20",
+    offer: 20,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem53,
@@ -920,7 +920,7 @@ export const foodItems = [
     description: "A mix of chicken, mutton, and prawn in fried rice.",
     current_Price: 170,
     original_Price: 210,
-    offer: "19",
+    offer: 19,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem54,
@@ -933,7 +933,7 @@ export const foodItems = [
       "Shezwan-style mixed fried rice with chicken, mutton, and prawn.",
     current_Price: 180,
     original_Price: 220,
-    offer: "18",
+    offer: 18,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem55,
@@ -945,7 +945,7 @@ export const foodItems = [
     description: "Triple fried rice with a delightful mix of meats.",
     current_Price: 220,
     original_Price: 260,
-    offer: "15",
+    offer: 15,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem56,
@@ -957,7 +957,7 @@ export const foodItems = [
     description: "Flavorful fried rice with juicy prawns.",
     current_Price: 160,
     original_Price: 190,
-    offer: "16",
+    offer: 16,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem57,
@@ -969,7 +969,7 @@ export const foodItems = [
     description: "Spicy prawn shezwan fried rice bursting with flavors.",
     current_Price: 180,
     original_Price: 210,
-    offer: "14",
+    offer: 14,
     category: "Non-Veg",
     subCategory: "Fried Rice",
     image: fooditem58,
@@ -981,7 +981,7 @@ export const foodItems = [
     description: "Classic egg fried rice with fluffy eggs.",
     current_Price: 100,
     original_Price: 120,
-    offer: "17",
+    offer: 17,
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem59,
@@ -993,7 +993,7 @@ export const foodItems = [
     description: "Spicy Schezwan fried rice with scrambled egg.",
     current_Price: 110,
     original_Price: 130, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem60,
@@ -1005,7 +1005,7 @@ export const foodItems = [
     description: "Fried rice with marinated paneer cubes.",
     current_Price: 110,
     original_Price: 120, // Replace with actual value if available
-    offer: "10", // Replace with actual offer if available
+    offer: 10, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem61,
@@ -1017,7 +1017,7 @@ export const foodItems = [
     description: "Spicy Schezwan fried rice with paneer.",
     current_Price: 120,
     original_Price: 140, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem62,
@@ -1029,7 +1029,7 @@ export const foodItems = [
     description: "Classic fried rice with mixed vegetables.",
     current_Price: 60, // Fixed pricing issue
     original_Price: 80, // Replace with actual value if available
-    offer: "25", // Replace with actual offer if available
+    offer: 25, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem63,
@@ -1041,7 +1041,7 @@ export const foodItems = [
     description: "Schezwan-style fried rice with vegetables.",
     current_Price: 100,
     original_Price: 120, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem64,
@@ -1053,7 +1053,7 @@ export const foodItems = [
     description: "Fried rice with crispy veg Manchurian balls.",
     current_Price: 140,
     original_Price: 160, // Replace with actual value if available
-    offer: "12", // Replace with actual offer if available
+    offer: 12, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem65,
@@ -1065,7 +1065,7 @@ export const foodItems = [
     description: "Triple-flavored veg fried rice with exotic vegetables.",
     current_Price: 140,
     original_Price: 160, // Replace with actual value if available
-    offer: "10", // Replace with actual offer if available
+    offer: 10, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem66,
@@ -1077,7 +1077,7 @@ export const foodItems = [
     description: "Spicy fried rice with green chili peppers.",
     current_Price: 110,
     original_Price: 130, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem67,
@@ -1089,7 +1089,7 @@ export const foodItems = [
     description: "Schezwan fried rice with green chili peppers.",
     current_Price: 120,
     original_Price: 140, // Replace with actual value if available
-    offer: "14", // Replace with actual offer if available
+    offer: 14, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Fried Rice",
     image: fooditem68,
@@ -1101,7 +1101,7 @@ export const foodItems = [
     description: "Crispy vegetable balls in a spicy chili sauce.",
     current_Price: 100,
     original_Price: 120, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem69,
@@ -1113,7 +1113,7 @@ export const foodItems = [
     description: "Dry chili veg dish with crispiness and spice.",
     current_Price: 100,
     original_Price: 120, // Replace with actual value if available
-    offer: "20", // Replace with actual offer if available
+    offer: 20, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem70,
@@ -1125,7 +1125,7 @@ export const foodItems = [
     description: "Crispy veg balls in a tangy Manchurian sauce.",
     current_Price: 100,
     original_Price: 120, // Replace with actual value if available
-    offer: "15", // Replace with actual offer if available
+    offer: 15, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem71,
@@ -1137,7 +1137,7 @@ export const foodItems = [
     description: "Spicy mushroom dish with rich flavors.",
     current_Price: 120,
     original_Price: 140, // Replace with actual value if available
-    offer: "14", // Replace with actual offer if available
+    offer: 14, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem72,
@@ -1149,7 +1149,7 @@ export const foodItems = [
     description: "Tangy and spicy Schezwan sauce with veggies.",
     current_Price: 120,
     original_Price: 150, // Replace with actual value if available
-    offer: "20", // Replace with actual offer if available
+    offer: 20, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem73,
@@ -1161,7 +1161,7 @@ export const foodItems = [
     description: "Garlic sauce with a blend of vegetables.",
     current_Price: 130,
     original_Price: 150, // Replace with actual value if available
-    offer: "13", // Replace with actual offer if available
+    offer: 13, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem74,
@@ -1173,7 +1173,7 @@ export const foodItems = [
     description: "Paneer cubes in a spicy chili sauce.",
     current_Price: 140,
     original_Price: 160, // Replace with actual value if available
-    offer: "12", // Replace with actual offer if available
+    offer: 12, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem75,
@@ -1185,7 +1185,7 @@ export const foodItems = [
     description: "Dry paneer chili with a blend of spices.",
     current_Price: 150,
     original_Price: 170, // Replace with actual value if available
-    offer: "12", // Replace with actual offer if available
+    offer: 12, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem76,
@@ -1197,7 +1197,7 @@ export const foodItems = [
     description: "Paneer cubes in a tangy Manchurian sauce.",
     current_Price: 150,
     original_Price: 180, // Replace with actual value if available
-    offer: "12", // Replace with actual offer if available
+    offer: 12, // Replace with actual offer if available
     category: "Veg",
     subCategory: "Veg Sauce",
     image: fooditem78,
@@ -1209,7 +1209,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 300,
     original_Price: 375, // 20% higher than current_Price
-    offer: "20%", // 20% discount
+    offer: 20, // 20% discount
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem79,
@@ -1221,7 +1221,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 380,
     original_Price: 475,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem80,
@@ -1233,7 +1233,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 350,
     original_Price: 438,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem81,
@@ -1245,7 +1245,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 350,
     original_Price: 438,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem82,
@@ -1257,7 +1257,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 180,
     original_Price: 225,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem83,
@@ -1269,7 +1269,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 180,
     original_Price: 225,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem84,
@@ -1281,7 +1281,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 180,
     original_Price: 225,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem85,
@@ -1293,7 +1293,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 80,
     original_Price: 100,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem86,
@@ -1305,7 +1305,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 90,
     original_Price: 113,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem87,
@@ -1317,7 +1317,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 190,
     original_Price: 238,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem88,
@@ -1329,7 +1329,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 170,
     original_Price: 213,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem89,
@@ -1341,7 +1341,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 200,
     original_Price: 250,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem90,
@@ -1353,7 +1353,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 230,
     original_Price: 288,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Tandoori Dry",
     image: fooditem91,
@@ -1365,7 +1365,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 450,
     original_Price: 563,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Chicken Gravy",
     image: fooditem92,
@@ -1377,7 +1377,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 200,
     original_Price: 250,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Chicken Gravy",
     image: fooditem93,
@@ -1389,7 +1389,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 180,
     original_Price: 225,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Chicken Gravy",
     image: fooditem94,
@@ -1401,7 +1401,7 @@ export const foodItems = [
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 180,
     original_Price: 225,
-    offer: "20%",
+    offer: 20,
     category: "Veg",
     subCategory: "Chicken Gravy",
     image: fooditem95,
@@ -1413,8 +1413,8 @@ export const foodItems = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus ipsa necessitatibus repellat fugiat delectus sequi ipsum iusto!",
     current_Price: 170,
-    original_Price: "",
-    offer: "",
+    original_Price: 180,
+    offer: 10,
     category: "Veg",
     subCategory: "Chicken Gravy",
     image: fooditem96,

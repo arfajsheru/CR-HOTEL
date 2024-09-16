@@ -3,10 +3,13 @@ import Title from "../component/Title";
 import { foodItems } from "../assets/assets";
 import { RxCross2 } from "react-icons/rx";
 import { ShopContext } from "../context/ShopContext";
+import CartTotal from "../component/CartTotal";
 
 const Cart = () => {
 
-  const { cartitems, cartdata, setcartData } = useContext(ShopContext);
+ 
+  const { cartitems, cartdata, setcartData,removeCartItems} = useContext(ShopContext);
+  
 
  
   useEffect(() => {
@@ -68,65 +71,20 @@ const Cart = () => {
                     -
                   </span>
                   <span className="w-8 h-6 text-center px-1 font-medium  md:font-bold border-gray-400">
-                    10
+                    {item.quantity}
                   </span>
                   <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5">
                     +
                   </span>
                 </div>
-                <div></div>
-                <div className="absolute right-1 md:right-3 top-2">
-                  <RxCross2 className="md:text-2xl cursor-pointer" />
+                <div className="absolute right-1 md:right-1 top-1">
+                  <RxCross2 onClick={() => removeCartItems(productData.id,0)} className="md:text-2xl cursor-pointer" />
                 </div>
               </div>
             );
           })}
         </div>
-        <div className=" flex-1 px-3 md:px-7">
-          <div className="text-2xl md:text-3xl text-center">
-            <Title text1={"CART"} text2={"TOTAL"} />
-          </div>
-          <div className="flex flex-col">
-            <div className="h-14 content-center bg-custom border-2 mt-5">
-              <p className="text-xl md:text-2xl px-2 font-bold font-nav-font text-gray-800 uppercase">
-                Price Details{" "}
-                <span className="font-bold text-3xl text-white"> 3</span> items
-              </p>
-            </div>
-
-            {/* Subtotal */}
-            <div className="flex justify-between mb-2 mt-2">
-              <span className="font-semibold">Subtotal</span>
-              <span>${(300).toFixed(2)}</span>
-            </div>
-
-            {/* Discount */}
-            <div className="flex justify-between mb-2">
-              <span className="font-semibold">Discount ({discount}%)</span>
-              <span>{((300 * discount) / 100).toFixed(2)}</span>
-            </div>
-
-            {/* Shipping */}
-            <div className="flex justify-between mb-2">
-              <span className="font-semibold">Shipping</span>
-              <span>${(20).toFixed(2)}</span>
-            </div>
-
-            {/* Divider */}
-            <div className="border-t border-gray-300 my-4"></div>
-
-            {/* Total */}
-            <div className="flex justify-between font-bold text-lg">
-              <span>Total</span>
-              <span>${(300 - (300 * discount) / 100 + 20).toFixed(2)}</span>
-            </div>
-
-            {/* Proceed to Checkout Button */}
-            <button className="mt-5 w-[50%] bg-custom font-medium text-black py-3 text-xs  md:text-xl uppercase  rounded-sm shadow-lg">
-              Proceed to Checkout
-            </button>
-          </div>
-        </div>
+        <CartTotal />
       </div>
     </div>
   );

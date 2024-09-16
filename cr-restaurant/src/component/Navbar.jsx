@@ -21,7 +21,7 @@ import discount from "../assets/discount.png";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { wishlist } = useContext(ShopContext);
+  const { wishlist, getCartCount} = useContext(ShopContext);
   const [information, setInformation] = useState(false);
 
   const handleScroll = () => {
@@ -103,7 +103,7 @@ const Navbar = () => {
             <MdOutlineLocalGroceryStore className="text-2xl text-custom icon" />
             <p className="text-[9px] relative">Cart</p>
             <p className="absolute right-[-2px] top-[-8px] w-4 leading-4 bg-custom aspect-square text-center rounded-[7px] text-[9px] font-bold font-mono">
-              99
+              {getCartCount()}
             </p>
           </Link>
 
