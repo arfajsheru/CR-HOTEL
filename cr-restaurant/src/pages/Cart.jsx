@@ -7,31 +7,32 @@ import CartTotal from "../component/CartTotal";
 import { FaOpencart } from "react-icons/fa";
 
 const Cart = () => {
+  const { cartitems, cartdata, setcartData, UpdateQuantity } =
+    useContext(ShopContext);
 
- 
-  const { cartitems, cartdata, setcartData,removeCartItems} = useContext(ShopContext);
-  
-
- 
   useEffect(() => {
     let tempData = [];
     // Use Object.entries to get both keys and values
     for (const [id, quantity] of Object.entries(cartitems)) {
-        if (quantity > 0) {
-            tempData.push({
-                id: id,
-                quantity: quantity,
-            });
-        }
+      if (quantity > 0) {
+        tempData.push({
+          id: id,
+          quantity: quantity,
+        });
+      }
     }
     setcartData(tempData);
-}, [cartitems]);
-
+  }, [cartitems]);
 
   useEffect(() => {
-    window.scroll(0,0);
-  },[])
-  const discount = 10;
+    window.scroll(0, 0);
+  }, []);
+
+  const handleQuntityChange = (itemId,newQuantity) => {
+    if(newQuantity > 0) {
+      UpdateQuantity(itemId,newQuantity);
+    }
+  }
 
   return (
     <div className="py-4">
@@ -42,7 +43,7 @@ const Cart = () => {
             <Title text1={"YOUR"} text2={"CART"} />
           </div>
           {cartdata.map((item, index) => {
-            const productData = foodItems.find((food) => food.id === item.id)
+            const productData = foodItems.find((food) => food.id === item.id);
             return (
               <div
                 key={index}
@@ -68,32 +69,41 @@ const Cart = () => {
                   </div>
                 </div>
                 <div className="flex w-16 md:w-20 bg-white items-center justify-center text-gray-600 ">
-                  <span className="w-7 h-6 text-center font-medium bg-custom  cursor-pointer leading-5">
+                  <span className="w-7 h-6 text-center font-medium bg-custom  cursor-pointer leading-5"
+                  onClick={() => handleQuntityChange(item.id,item.quantity - 1)}
+                  >
                     -
                   </span>
                   <span className="w-8 h-6 text-center px-1 font-medium  md:font-bold border-gray-400">
                     {item.quantity}
                   </span>
-                  <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5">
+                  <span className="w-7 h-6 text-center bg-custom font-medium cursor-pointer leading-5"
+                  onClick={() => handleQuntityChange(item.id,item.quantity + 1)}
+                  >
                     +
                   </span>
                 </div>
                 <div className="absolute right-1 md:right-1 top-1">
-                  <RxCross2 onClick={() => removeCartItems(productData.id,0)} className="md:text-2xl cursor-pointer" />
+                  <RxCross2
+                    onClick={() => removeCartItems(productData.id, 0)}
+                    className="md:text-2xl cursor-pointer"
+                  />
                 </div>
               </div>
             );
           })}
 
-          {cartdata.length === 0 && 
-          <div className="flex items-center flex-col justify-center my-auto">
-            <FaOpencart className="text-9xl text-gray-300" />
-            <span className="text-5xl md:text-8xl font-bold text-gray-300">Empty Prodcut</span>
-            <button className="mt-10 w-[50%] md:w-[20%] bg-custom font-medium text-black py-3 text-xl  md:text-xl uppercase  rounded-sm shadow-lg">
-        Shop now
-      </button>
-          </div>
-          }
+          {cartdata.length === 0 && (
+            <div className="flex items-center flex-col justify-center my-auto">
+              <FaOpencart className="text-9xl text-gray-300" />
+              <span className="text-5xl md:text-8xl font-bold text-gray-300">
+                Empty Prodcut
+              </span>
+              <button className="mt-10 w-[50%] md:w-[20%] bg-custom font-medium text-black py-3 text-xl  md:text-xl uppercase  rounded-sm shadow-lg">
+                Shop now
+              </button>
+            </div>
+          )}
         </div>
         <CartTotal />
       </div>
