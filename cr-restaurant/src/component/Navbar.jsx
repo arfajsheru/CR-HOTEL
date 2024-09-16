@@ -221,7 +221,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`fixed bottom-0 h-[60px] bg-white w-full z-10 flex justify-around items-center sm:hidden shadow-[0_-5px_10px_rgba(255,255,255,0.8)]`}
+        className={`fixed bottom-0 h-[65px] bg-white w-full z-10 flex justify-around items-center sm:hidden shadow-[0_-5px_10px_rgba(255,255,255,0.8)]`}
       >
         <Link
           to={"/"}
