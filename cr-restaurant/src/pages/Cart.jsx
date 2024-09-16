@@ -4,6 +4,7 @@ import { foodItems } from "../assets/assets";
 import { RxCross2 } from "react-icons/rx";
 import { ShopContext } from "../context/ShopContext";
 import CartTotal from "../component/CartTotal";
+import { FaOpencart } from "react-icons/fa";
 
 const Cart = () => {
 
@@ -83,6 +84,16 @@ const Cart = () => {
               </div>
             );
           })}
+
+          {cartdata.length === 0 && 
+          <div className="flex items-center flex-col justify-center my-auto">
+            <FaOpencart className="text-9xl text-gray-300" />
+            <span className="text-5xl md:text-8xl font-bold text-gray-300">Empty Prodcut</span>
+            <button className="mt-10 w-[50%] md:w-[20%] bg-custom font-medium text-black py-3 text-xl  md:text-xl uppercase  rounded-sm shadow-lg">
+        Shop now
+      </button>
+          </div>
+          }
         </div>
         <CartTotal />
       </div>

@@ -233,9 +233,10 @@ const Navbar = () => {
 
         <Link
           to={"/cart"}
-          className="flex flex-col items-center text-3xl text-black cursor-pointer"
+          className="relative flex flex-col items-center text-3xl text-black cursor-pointer"
         >
           <MdOutlineLocalGroceryStore />
+          <p className="absolute right-[1px] top-[-5px] w-4 leading-4 text-white bg-black aspect-square text-center rounded-[7px] text-[13px] font-bold font-mono">{getCartCount()}</p>
           <p className="text-xs">Cart</p>
         </Link>
 
