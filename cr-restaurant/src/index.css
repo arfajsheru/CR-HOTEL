@@ -454,6 +454,16 @@ a.active p{
 /* Add this CSS to your stylesheet or use it inline */
 
 /* Sidebar transition styles */
+/* Hide scrollbar for WebKit browsers */
+.fixed::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.fixed {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
 
 

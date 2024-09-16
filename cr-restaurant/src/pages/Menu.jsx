@@ -202,15 +202,21 @@ const Menu = () => {
         </div>
       </div>
 
+
+
+
+
+
+            {/* mobile filter section */}
       <div
-        className={`fixed right-0 bottom-0 left-0 overflow-hidden bg-white transition-transform duration-500 ${
+        className={`fixed right-0 bottom-0 left-0 overflow-hidden overflow-y-scroll bg-white transition-transform duration-500 ${
           IshowFilter
             ? "-translate-y-0 w-full h-[80vh] z-50"
             : "translate-y-full w-0"
         } sm:hidden`}
       >
         {/* Filter Title Section */}
-        <div className="flex justify-between items-center border-b border-gray-700 p-2 text-2xl">
+        <div className="flex justify-between items-center border-b border-gray-700 p-2 text-2xl ">
           <p className="text-custom font-bold text-2xl ">Filter</p>
           <RxCross2 onClick={() => setIShowFilter(!IshowFilter)} />
         </div>
@@ -259,57 +265,20 @@ const Menu = () => {
           </div>
             
             {/* SubCategory */}
-          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200  ">
+          <div className="flex flex-col gap-2 p-2 w-full bg-gray-200">
             <p className="text-sm font-medium  ">SUBCATEGORY</p>
-
-            <p className="flex gap-2">
+                {
+                  menu_list.map((category) => (
+                    <p className="flex gap-2">
               <input
                 type="checkbox"
-                value={"Dahi salad"}
+                value={category.menu_name}
                 onChange={handleToggleSubCategory}
               />
-              Dahi Salad
+              {category.menu_name}
             </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Chinese Starter"}
-                onChange={handleToggleSubCategory}
-              />
-              Chinese starter
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Soup"}
-                onChange={handleToggleSubCategory}
-              />
-              Soup
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Noodles"}
-                onChange={handleToggleSubCategory}
-              />
-              Noodles
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Fried Rice"}
-                onChange={handleToggleSubCategory}
-              />
-              Fried Rice
-            </p>
-            <p className="flex gap-2">
-              <input
-                type="checkbox"
-                value={"Veg Sauce"}
-                onChange={handleToggleSubCategory}
-              />
-              Veg. Sauce
-            </p>
+                  ))
+                }
           </div>
           <button
            onClick={() => {
