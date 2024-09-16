@@ -85,7 +85,7 @@ const Cart = () => {
                 </div>
                 <div className="absolute right-1 md:right-1 top-1">
                   <RxCross2
-                    onClick={() => removeCartItems(productData.id, 0)}
+                    onClick={() => UpdateQuantity(productData.id, 0)}
                     className="md:text-2xl cursor-pointer"
                   />
                 </div>
