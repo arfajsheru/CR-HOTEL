@@ -95,6 +95,9 @@ const Menu = () => {
   const handleClearAllFilter = () => {
     setIsVegSelected(!isVegSelected);
     setIsNonVegSelected(!isNonVegSelected);
+    setSortType('Relavent');
+    setCategory([]);
+    setSubCategory([]);
     setFilterProduct(foodItems);
   }
 
@@ -216,8 +219,8 @@ const Menu = () => {
         } sm:hidden`}
       >
         {/* Filter Title Section */}
-        <div className="flex justify-between items-center border-b border-gray-700 p-2 text-2xl ">
-          <p className="text-custom font-bold text-2xl ">Filter</p>
+        <div className="flex justify-between items-center border-b border-t border-gray-700 p-2 text-2xl bg-custom ">
+          <p className="text-white font-bold text-2xl ">Filter</p>
           <RxCross2 onClick={() => setIShowFilter(!IshowFilter)} />
         </div>
 
@@ -280,12 +283,22 @@ const Menu = () => {
                   ))
                 }
           </div>
+
+          <div className="flex gap-2">
+
           <button
            onClick={() => {
-            applyfilter(); // Call your applyFilter function
-            setIShowFilter(!IshowFilter); // Toggle the filter state
-          }}
-          className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Apply</button>
+             applyfilter(); // Call your applyFilter function
+             setIShowFilter(!IshowFilter); // Toggle the filter state
+            }}
+            className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Apply</button>
+           <button
+           onClick={() => {
+            handleClearAllFilter();
+             setIShowFilter(!IshowFilter); // Toggle the filter state
+            }}
+            className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Clear All</button>
+            </div>
         </div>
       </div>
 
