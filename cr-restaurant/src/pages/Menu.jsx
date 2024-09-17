@@ -128,7 +128,7 @@ const Menu = () => {
 
         <button
           onClick={applyfilter}
-          className={` hidden w-1/4 h-8 font-medium rounded-sm bg-custom  sm:block`}
+          className={` hidden w-1/4 h-8 font-medium text-white rounded-sm bg-custom  sm:block shadow-sm hover:shadow-2xl hover:opacity-80`}
         >
           Apply
         </button>
@@ -196,6 +196,7 @@ const Menu = () => {
               <input
                 type="checkbox"
                 value={category.menu_name}
+                checked={subCategory.includes(category.menu_name)} 
                 onChange={handleToggleSubCategory}
               />
               {category.menu_name}
@@ -203,6 +204,12 @@ const Menu = () => {
             ))}
           </div>
         </div>
+        <button
+           onClick={() => {
+            handleClearAllFilter();
+             setIShowFilter(!IshowFilter); // Toggle the filter state
+            }}
+            className="hidden md:block w-28 mt-4 h-9 font-medium text-white bg-custom rounded-sm shadow-sm hover:shadow-2xl hover:opacity-80">Clear All</button>
       </div>
 
 
@@ -219,8 +226,8 @@ const Menu = () => {
         } sm:hidden`}
       >
         {/* Filter Title Section */}
-        <div className="flex justify-between items-center border-b border-t border-gray-700 p-2 text-2xl bg-custom ">
-          <p className="text-white font-bold text-2xl ">Filter</p>
+        <div className="flex justify-between items-center border-b border-t text-white border-gray-300 shadow-md p-2 text-2xl bg-custom ">
+          <p className=" font-medium uppercase text-2xl ">Filter</p>
           <RxCross2 onClick={() => setIShowFilter(!IshowFilter)} />
         </div>
 
@@ -276,6 +283,7 @@ const Menu = () => {
               <input
                 type="checkbox"
                 value={category.menu_name}
+                checked={subCategory.includes(category.menu_name)} 
                 onChange={handleToggleSubCategory}
               />
               {category.menu_name}
@@ -284,20 +292,20 @@ const Menu = () => {
                 }
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex justify-between w-full">
 
           <button
            onClick={() => {
              applyfilter(); // Call your applyFilter function
              setIShowFilter(!IshowFilter); // Toggle the filter state
             }}
-            className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Apply</button>
+            className="w-28 h-9 font-medium font-cart-font text-white bg-custom shadow-lg hover:text-opacity-50 hover:shadow-2xl  ">Apply</button>
            <button
            onClick={() => {
             handleClearAllFilter();
              setIShowFilter(!IshowFilter); // Toggle the filter state
             }}
-            className="w-28 mt-4 h-9 font-bold text-white bg-custom border border-black rounded-lg">Clear All</button>
+            className="w-28 h-9 font-medium font-cart-font text-white bg-custom shadow-lg hover:text-opacity-50 hover:shadow-2xl ">Clear All</button>
             </div>
         </div>
       </div>
