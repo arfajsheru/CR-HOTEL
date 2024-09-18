@@ -49,6 +49,7 @@ const SearchBar = () => {
               </div>
               <input
                 type="text"
+                autoFocus
                 className="flex-grow px-3 text-xs md:text-xl w-full outline-none border-none text-custom font-medium"
                 placeholder="Search food items..."
                 onChange={(e) => setSearchTerm(e.target.value)}
