@@ -25,7 +25,7 @@ const SearchBar = () => {
               </div>
               <input
                 type="text"
-                className="border border-gray-300 p-1 md:p-2 text-xs md:text-xl  w-full outline-none border-none"
+                className="border border-gray-300 p-1 md:p-2 text-xs md:text-xl  w-full outline-none border-none text-custom font-medium"
                 placeholder="Search food items..."
               />
             </div>
