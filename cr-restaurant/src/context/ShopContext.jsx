@@ -4,6 +4,8 @@ import { foodItems } from "../assets/assets";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
+  const [visible, setVisible] = useState(false);
+  const[searchVisible,setSearchVisible] = useState(false);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [wishlist, setWishlist] = useState([]);
@@ -81,9 +83,12 @@ const ShopContextProvider = (props) => {
   };
 
   const value = {
+
     delivery_Fee,
     rupees,
     foodItems,
+    visible,
+    setVisible,
     category,
     setCategory,
     subCategory,
@@ -100,6 +105,9 @@ const ShopContextProvider = (props) => {
     getCartCount,
     UpdateQuantity,
     getCartAmount,
+    searchVisible,
+    setSearchVisible
+    
   };
 
   return (

@@ -14,6 +14,8 @@ import Footer from "./component/Footer";
 import logo from "/logo3.png";
 import CategoryItems from "./pages/CategoryItems";
 import Wishlist from "./pages/Wishlist";
+import SearchProduct from "./pages/SearchProduct";
+import SearchBar from "./component/SearchBar";
 const App = () => {
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +26,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className=" app">
+    <div className=" app relative">
       {loading ? (
         <div className="flex justify-center items-center h-screen">
           <span className="loader">
@@ -35,7 +37,8 @@ const App = () => {
         <>
           <Navbar />
           <div className="px-4 sm:px-[1vw] md:px-[2vw] lg:px-[3vw]">
-            <Routes>
+          <SearchBar />
+            <Routes> 
               <Route path="/" element={<Home />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/about" element={<About />} />
@@ -47,6 +50,7 @@ const App = () => {
               <Route path="/product/:productId" element={<Product />} />
               <Route path="/wishlist" element={<Wishlist/>} />
               <Route path="/categoryItem/:category" element={<CategoryItems />}/>
+              <Route path="/SearchProduct/:search" element={<SearchProduct />} />
             </Routes>
           </div>
           <Footer />

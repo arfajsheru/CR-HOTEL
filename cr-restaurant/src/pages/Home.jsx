@@ -6,6 +6,7 @@ import Newsletter from '../component/Newsletter'
 import BestSellar from '../component/BestSellar'
 
 
+
 const Home = () => {
   
   useEffect(() => {
@@ -15,6 +16,7 @@ const Home = () => {
 
   return (
     <div>
+    
      <Banner />
      <Category />
      <BestSellar />

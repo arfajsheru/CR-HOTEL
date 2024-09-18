@@ -195,6 +195,7 @@ const Menu = () => {
               <p className="flex gap-2">
               <input
                 type="checkbox"
+                key={category.menu_name}
                 value={category.menu_name}
                 checked={subCategory.includes(category.menu_name)} 
                 onChange={handleToggleSubCategory}
@@ -278,10 +279,11 @@ const Menu = () => {
           <div className="flex flex-col gap-2 p-2 w-full bg-gray-200">
             <p className="text-sm font-medium  ">SUBCATEGORY</p>
                 {
-                  menu_list.map((category) => (
+                  menu_list.map((category,index) => (
                     <p className="flex gap-2">
               <input
                 type="checkbox"
+                key={index}
                 value={category.menu_name}
                 checked={subCategory.includes(category.menu_name)} 
                 onChange={handleToggleSubCategory}
