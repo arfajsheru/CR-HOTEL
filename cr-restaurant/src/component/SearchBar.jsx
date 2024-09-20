@@ -40,7 +40,7 @@ const SearchBar = () => {
           ></div>
 
           {/* Modal centered in the viewport */}
-          <div className="flex flex-col gap-2 fixed top-32 md:top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85vw] sm:w-80vw md:w-[60vw] lg:w-[50vw] max-w-[600px] bg-transparent z-50 shadow-lg rounded-sm overflow-y-scroll">
+          <div className="flex flex-col gap-2 fixed top-64 md:top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85vw] sm:w-80vw md:w-[60vw] lg:w-[50vw] max-w-[600px] bg-transparent z-50 shadow-lg rounded-sm overflow-y-scroll">
             {/* Modal Content */}
             <div className="flex w-full items-center rounded-sm border-2 border-custom bg-white">
               {/* Icon with full height and same width as input */}
