@@ -2,7 +2,7 @@ import React from 'react'
 
 const Order = () => {
   return (
-    <div>Wrorking progress....</div>
+    <div>Wrork in progress....</div>
   )
 }
 
